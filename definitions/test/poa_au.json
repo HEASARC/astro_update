@@ -1,0 +1,11 @@
+{"PINT of ALE": 
+{"pattern": "\\d+\\.{0,1}\\d+",
+"pattern_marker": "The most recent version is",
+"pattern_description":"one or more numbers followed by 0 or one dot followed by 0 or more numbers",
+"home_url":"http://www.gnu.org/software/gsl/",
+"download_url":" ftp://ftp.gnu.org/gnu/gsl/",
+"version_url":"http://www.gnu.org/software/gsl/",
+"description":"a numerical library for C and C++ programmers providing a wide range of mathematical routines",
+"author":"FSF",
+"author_page":"http://www.fsf.org/"}}
+

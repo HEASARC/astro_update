@@ -1,0 +1,13 @@
+{
+    "tlusty": {
+        "author_page": "http://nova.astro.umd.edu/index.html", 
+        "pattern_marker": "version", 
+        "pattern_description": "one or more digits followed by zeror or 1 period followed by one or more digits", 
+        "version_url": "http://nova.astro.umd.edu/index.html", 
+        "author": "Hubeny+Lanz", 
+        "pattern": "\\d+\\.{0,1}\\d+", 
+        "home_url": "http://nova.astro.umd.edu/index.html", 
+        "download_url": "http://nova.astro.umd.edu/index.html", 
+        "description": "A user-oriented package for modelling stellar atmospheres and accretion disks and for stellar spectroscopic diagnostics"
+    }
+}

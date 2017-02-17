@@ -1,0 +1,11 @@
+{"ACIS Extract": 
+{"pattern": "\\d{4}\\D{3}\\d{2}",
+"pattern_marker": "<a href='ae'",
+"pattern_description":"a 4-digit year followed by the 3-letter month abbreviation followed a 2-digit date",
+"home_url":"http://www2.astro.psu.edu/xray/docs/TARA/ae_users_guide.html",
+"download_url":"http://www.astro.psu.edu/xray/docs/TARA/code",
+"version_url":"http://www.astro.psu.edu/xray/docs/TARA/code",
+"description":"IDL software for analysis of Chandra/ACIS data",
+"author":"Broos et al.",
+"author_page":"http://www2.astro.psu.edu/xray/"}}
+

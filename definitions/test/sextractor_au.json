@@ -1,0 +1,11 @@
+{"SExtractor": 
+{"pattern": "\\d+\\.+\\d+\\.+\\d+",
+"pattern_marker": "<a href='/projects/sextractor/files/latest/download?source=files' title=",
+"pattern_description":"one or more numbers followed by 0 or one dot followed by 0 or more numbers followed by 0 or one dot followed by 0 or more numbers",
+"home_url":"http://sextractor.sourceforge.net",
+"download_url":"https://sourceforge.net/projects/sextractor/files/",
+"version_url":"https://sourceforge.net/projects/sextractor/files/",
+"description":"Astronomical Source Extractor",
+"author":"Galassi and Starr ",
+"author_page":"mailto:rosalia@galassi.org"}}
+

@@ -1,0 +1,10 @@
+{"Aladin": 
+{"pattern": "\\d+.\\d+-\\d+", 
+"pattern_marker": "GAIA is currently at version",
+"pattern_description":"a number followed by a dot followed by a number followed by a dash followed by a number",
+"home_url":"http://astro.dur.ac.uk/~pdraper/gaia/gaia.html",
+"download_url":"http://starlink.eao.hawaii.edu/starlink",
+"version_url":"http://astro.dur.ac.uk/~pdraper/gaia/gaia.html",
+"description":"Highly interactive image display tool ",
+"author":"P. W. Draper",
+"author_page:"mailto:p.w.draper@durham.ac.uk"}}

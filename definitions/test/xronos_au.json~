@@ -1,0 +1,13 @@
+{
+    "xronos": {
+        "author_page": "http://heasarc.gsfc.nasa.gov/docs/xanadu/xronos/xronos.html", 
+        "pattern_marker": "version", 
+        "pattern_description": "one or more digits followed by zeror or 1 period followed by one or more digits", 
+        "version_url": "http://heasarc.gsfc.nasa.gov/docs/xanadu/xronos/xronos.html", 
+        "author": "HEASARC", 
+        "pattern": "\\d+\\.{0,1}\\d+", 
+        "home_url": "http://heasarc.gsfc.nasa.gov/docs/xanadu/xronos/xronos.html", 
+        "download_url": "http://heasarc.gsfc.nasa.gov/docs/xanadu/xronos/xronos.html", 
+        "description": "Timing Analysis Software"
+    }
+}

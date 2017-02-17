@@ -1,0 +1,13 @@
+{
+    "tara": {
+        "author_page": "http://www2.astro.psu.edu/xray/docs/TARA/code/", 
+        "pattern_marker": "version", 
+        "pattern_description": "one or more digits followed by zeror or 1 period followed by one or more digits", 
+        "version_url": "http://www.astro.psu.edu/xray/docs/TARA/ae_users_guide.html", 
+        "author": "PSU", 
+        "pattern": "\\d+\\.{0,1}\\d+", 
+        "home_url": "http://www2.astro.psu.edu/xray/docs/TARA/code/", 
+        "download_url": "http://www.astro.psu.edu/xray/docs/TARA/ae_users_guide.html", 
+        "description": "Tools for ACIS Review &amp; Analysis"
+    }
+}

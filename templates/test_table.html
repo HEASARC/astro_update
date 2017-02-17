@@ -1,0 +1,28 @@
+{% extends "test.html" %}
+{% block atable -%}
+<table class="tablesorter"  width="100%" align="center" frame="border" id="astroupdate_software">
+<!-- <tr><th  bgcolor="yellow" colspan="4"><u>Software</u></th></tr> -->
+
+<thead>
+<tr>
+	<th><u>Name</u></th>
+	<th><u>Responsible Entity</u></th>
+	<th><u>Version</u></th>
+	<th><u>Last Update</u></th>
+
+</tr>
+</thead>
+
+<tbody>
+
+    {% for software in audef.index.values %}
+        {% if audef.loc[software].ad_release_date is defined %}
+            <tr>
+            <td><a href="{{ audef.loc[software].home_url }}">{{ audef.loc[software].name }}:{{ audef.loc[software].description }}</a></td>
+            <td><a href="{{ audef.loc[software].author_page }}">{{ audef.loc[software].author }} </a></td>
+            <td><a href="{{ audef.loc[software].download_url }}">{{ audef.loc[software].ad_version }} </a></td>
+            <td> {{ audef.loc[software].ad_release_date.strftime('%m/%d/%y') }} </a></td>
+            </tr>
+        {% endif %}
+    {% endfor %}
+{%- endblock %}

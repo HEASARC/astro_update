@@ -1,0 +1,13 @@
+{
+    "starlinksoftware collection": {
+        "author_page": "http://starlink.eao.hawaii.edu/starlink", 
+        "pattern_marker": "version", 
+        "pattern_description": "one or more digits followed by zeror or 1 period followed by one or more digits", 
+        "version_url": "http://starlink.eao.hawaii.edu/starlink", 
+        "author": "JAC", 
+        "pattern": "\\d+\\.{0,1}\\d+", 
+        "home_url": "http://starlink.eao.hawaii.edu/starlink", 
+        "download_url": "http://starlink.eao.hawaii.edu/starlink", 
+        "description": "starlinksoftware collection"
+    }
+}

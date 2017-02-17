@@ -1,0 +1,13 @@
+{
+    "galprop": {
+        "author_page": "http://galprop.stanford.edu/", 
+        "pattern_marker": "version", 
+        "pattern_description": "one or more digits followed by zeror or 1 period followed by one or more digits", 
+        "version_url": "http://galprop.stanford.edu/", 
+        "author": "Stanford", 
+        "pattern": "\\d+\\.{0,1}\\d+", 
+        "home_url": "http://galprop.stanford.edu/", 
+        "download_url": "http://galprop.stanford.edu/", 
+        "description": "Galactic Cosmic Ray Propagation"
+    }
+}

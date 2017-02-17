@@ -1,0 +1,13 @@
+{
+    "p2pp": {
+        "author_page": "http://www.eso.org/sci/observing/phase2/P2PP3.html", 
+        "pattern_marker": "version", 
+        "pattern_description": "one or more digits followed by zeror or 1 period followed by one or more digits", 
+        "version_url": "http://www.eso.org/sci/observing/phase2/P2PP3.html", 
+        "author": "ESO", 
+        "pattern": "\\d+\\.{0,1}\\d+", 
+        "home_url": "http://www.eso.org/sci/observing/phase2/P2PP3.html", 
+        "download_url": "http://www.eso.org/sci/observing/phase2/P2PP3.html", 
+        "description": "ESO Phase II Proposal Preparation"
+    }
+}

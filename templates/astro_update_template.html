@@ -1,0 +1,929 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 TRANSITIONAL//EN">
+<html>
+
+<head>
+<title>ASTRO-Update: the Latest in Astronomy Software</title>
+
+<link rel="stylesheet" type="text/css" href="/docs/css/reset.css" media="projection, screen" />
+<link rel="stylesheet" type="text/css" href="/docs/css/base.css" media="projection, screen" />
+<link rel="stylesheet" type="text/css" href="/docs/css/dropdown.css" media="projection, screen" />
+<link rel="stylesheet" type="text/css" href="/docs/css/AstroTheme.css" media="projection, screen" />
+<script src="/docs/js/jquery-1.4.2.min.js" type="text/javascript"></script>
+<!--[if IE 6]>
+	<link rel="stylesheet" type="text/css" href="/docs/css/ie6.css" media="projection, screen" />
+	<script src="/docs/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+	<script>
+		DD_belatedPNG.fix('div#bannerImg, li.tab1-on, li.tab1-off, li.tab-on, li.tab-off, #footer-signature, img');
+	</script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="/docs/portal.css">
+<link rel="stylesheet" type="text/css" href="/docs/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/docs/css/asd.css" media="projection, screen" />
+<script type="text/javascript" src="/scripts/overlib.js"><!-- overLIB (c) Erik Bosrup --></script>
+
+<script type="text/javascript" id="fed_an_ua_tag" src="/scripts/Universal-Federated-Analytics-Min.js?agency=NASA"></script><!-- Google Analytics -->
+
+</head>
+
+<body>
+<div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+
+	<div id="page-wrapper">
+    	<div id="page">
+<div class="navigation">
+<h2 style="text-align: center;"><a href="/docs/https.html" style="color: #cc0000; font-size: 12pt; text-decoration: none;">Upcoming HTTPS transition</a></h2>
+
+
+
+            <div id="nasaHeader">
+                <div>
+                    <a href="http://www.nasa.gov" class="imageLink"><img class="logo" src="/Images/portal_new/nasa_header_logo1.gif" alt="NASA Logo, National Aeronautics and Space Administration" width="140" height="98" /></a>
+                </div><!--class="nasaLogo"-->
+
+               <div id="headerTxtWrapper"> 
+                    <h1><a href="http://www.nasa.gov">National Aeronautics and Space Administration</a></h1>
+                    <h2><a href="http://www.nasa.gov/goddard/">Goddard Space Flight Center</a></h2>
+
+
+	   <h3><a href="http://science.gsfc.nasa.gov/">Sciences and Exploration</a></h3>
+
+               </div><!--headerTxtWrapper--> 
+               
+               <div id="HEASARCsearchbox">
+
+					<h3>Search:</h3>
+            <form action="/cgi-bin/search/search.pl" method="post" id="HEASARCsearch" name="HEASARCsearch">
+            <input type="text" name="tquery" id="search" value="Search HEASARC website" title="tquery" size="34" class="flt_left" onfocus="if(this.value=='Search HEASARC website') this.value='';">
+            <input type="image" alt="Search" src="/Images/portal_new/search_go.jpg" onclick="this.form.submit();" class="flt_left">
+            <input type="hidden" value="search.quick" id="fuseaction" name="fuseaction">
+            </form>
+            <div class="divClear"></div>
+		      <p style="font-size:10px;margin-top:1px"><a href="/cgi-bin/search/search.pl">[Advanced Search]</a></p>
+
+<br>
+<div style="margin-top:5px;"></div>
+<form name="QuickLinksForm" action=""><font size=-2>
+<label for="QuickLinksMenu"><a class="menu" href="/docs/corp/goto_text.html"><u>HEASARC Quick Links</u></a></label></font><br>
+<select class="Menu" name="QuickLinksMenu" size=1 id="QuickLinksMenu" style="display:none;" onChange="QuickLinksFormHandler();">
+<option class="MenuColorHEADER" value="/" selected>---Quick Links---</option>
+<option class="MenuColorHEADER" value="/docs/archive.html">---Archive Interfaces---</option>
+<option value="/cgi-bin/argus/argus.pl">Argus: proposal info</option>
+<option value="/docs/archive.html">Browse: search HEASARC archives</option>
+<option value="/vo/">NVO DataScope</option>
+<option value="http://skys.gsfc.nasa.gov/skymorph/skymorph.html">SkyMorph: search variable objects</option>
+<option value="http://skyview.gsfc.nasa.gov/">SkyView: virtual observatory</option>
+<option value="/xamin">Xamin: powerful archive search</option>
+<option class="MenuColorHEADER" value="/docs/software.html">---Software &amp; Tools---</option>
+<option value="/docs/heasarc/caldb/caldb_intro.html">CalDB: Calibration database</option>
+<option value="/cgi-bin/Tools/convcoord/convcoord.pl">Coordinate Converter</option>
+<option value="/cgi-bin/Tools/energyconv/energyConv.pl">Energy Converter</option>
+<option value="/docs/heasarc/fits.html">FITS: standard data format</option>
+<option value="/docs/software/fitsio/fitsio.html">FITSIO: FITS subroutine library</option>
+<option value="/docs/software/ftools/ftools_menu.html">FTOOLS: general s/w for FITS files</option>
+<option value="/docs/software/ftools/fv.html">fv: FITS file editor</option>
+<option value="/hera/">Hera: remote data analysis service</option>
+<option value="/cgi-bin/Tools/HEXTErock/HEXTErock.pl">HEXTErock</option>
+<option value="/cgi-bin/Tools/w3nh/w3nh.pl">nH: Column Density</option>
+<option value="/RPS/">RPS proposal submission</option>
+<option value="/xte_weather/">RXTE ASM weather map</option>
+<option value="/cgi-bin/Tools/DateConv/dateconv.pl">Time/Date Converter (xTime)</option>
+<option value="/cgi-bin/Tools/timeline/timeline.pl">Timeline (RXTE, Swift, &amp; HETE-2)</option>
+<option value="/cgi-bin/Tools/viewing/viewing.pl">Viewing: possible obs. times</option>
+<option value="/cgi-bin/Tools/w3pimms/w3pimms.pl">WebPIMMS: flux/count converter</option>
+<option value="/webspec/webspec.html">WebSpec: spectral sims</option>
+<option value="/cgi-bin/Tools/xraybg/xraybg.pl">X-ray Background Tool</option>
+<option value="/docs/xanadu/xanadu.html">Xanadu: data analysis suite</option>
+<option value="/cgi-bin/Tools/high_energy_source/high_energy_source.pl">X-ray, Gamma-ray, EUV Source Finder</option>
+<option class="MenuColorHEADER" value="/docs/HHP_heasarc_info.html">---Resources---</option>
+<option value="/docs/heasarc/biblio/pubs/">Bibliography</option>
+<option value="/docs/heasarc/contact.html">Contact Info</option>
+<option value="/docs/heasarc/headates/headates.html">Deadlines (proposals &amp; meeting regist.)</option>
+<option value="/docs/heasarc/headates/heahistory.html">History of High-Energy Astronomy</option>
+<option value="/docs/heasarc/meetings.html">Meetings</option>
+<option value="/docs/heasarc/staff/OGIP_staff.html">Staff</option>
+<option value="/docs/heasarc/whatsnew.html">What&#39;s New</option>
+<option class="MenuColorHEADER" value="/docs/outreach.html">---Education &amp; Pub. Outreach---</option>
+<option value="http://apod.nasa.gov/apod/astropix.html">APOD: Astronomy Picture of the Day</option>
+<option value="http://imagine.gsfc.nasa.gov/docs/ask_astro/ask_an_astronomer.html">Ask an Astrophysicist</option>
+<option value="/docs/objects/heapow/heapow.html">HEASARC Picture of the Week</option>
+<option value="/docs/objects/">Images, Spectra, Light Curves</option>
+<option value="http://imagine.gsfc.nasa.gov/">Imagine the Universe!</option>
+<option value="http://starchild.gsfc.nasa.gov/">StarChild (K-8 EPO)</option>
+<option value="/docs/outreach/webstars.html">WebStars: gen. astronomy info/news</option>
+</select>
+<script type="text/javascript">
+$('#QuickLinksMenu').css('display','inline-block');
+function QuickLinksFormHandler() {
+   var URL = document.QuickLinksForm.QuickLinksMenu.options[document.QuickLinksForm.QuickLinksMenu.selectedIndex].value;
+   window.location.href = URL;
+}
+</script>
+</form>
+
+
+
+</div>
+
+            </div><!--id = nasaHeader -->
+<div style="margin-top:2px;"></div>
+            <div class="hidden">
+					<a href="#skipping" title="Skip Navigation" accesskey="2">Skip Navigation (press 2)</a>
+			</div>
+</div><!-- end navigation -->
+
+  <div id="banner">
+    <div class="navigation">
+    <!--TOP MENU GOES HERE -->
+    <div id="siteMenuTop">
+      <ul id="menuTopNav">
+	<li><a href="/" class="siteMenuTop-frst-itm">HEASARC Home</a></li>
+	<li><a href="/docs/observatories.html">Observatories</a></li>
+	<li><a href="/docs/archive.html" class="">Archive</a></li>
+	<li><a href="/docs/heasarc/caldb/caldb_intro.html" class="">Calibration</a></li>
+	<li class="active"><a href="/docs/software.html" class="">Software</a></li>
+	<li><a href="/docs/tools.html" class="">Tools</a></li>
+	<li><a href="/docs/outreach.html" class="siteMenuTop-last-itm">Students/Teachers/Public</a></li>
+	
+      </ul>
+    </div><!--id="siteMenuTop"-->
+</div><!-- end navigation -->
+    <!--BANNER IMAGE GOES HERE-->
+    <div id="bannerImg">
+      <a href="/docs/software.html"><img src="/Images/portal_new/swbanner_new4.png" alt="HEASARC: Software" width="952" class="logo"></a>
+    </div><!--id=bannerImg-->
+  </div><!--id=banner-->
+  <div class="divClear"></div>
+  <div class="navigation">
+    <!--TOP MENU GOES HERE -->
+  <div id="siteMenuBottom">
+    <ul id="menuBottomNav">
+      <li><a href="/docs/software/fitsio/fitsio.html" class="siteMenuBottom-frst-itm">FITSIO</a></li>
+      <li><a href="/docs/software/ftools/ftools_menu.html" class="smallButton">FTOOLS</a></li>
+      <li><a href="/docs/software/ftools/fv/" class="smallButton">FV</a></li>
+      <li><a href="/docs/software/lheasoft/" class="smallButton">HEASoft</a></li>
+      <li><a href="/hera/" class="smallButton">Hera</a></li>
+      <li><a href="/docs/astroe/prop_tools/maki.html" class="smallButton">Maki</a></li>
+      <li><a href="/docs/software/tools/pimms.html" class="smallButton">PIMMS</a></li>
+      <li><a href="/docs/software/profit/" class="smallButton">PROFIT</a></li>
+      <li><a href="/docs/xanadu/xanadu.html" class="smallButton">Xanadu</a></li>
+      <li><a href="/docs/software/lheasoft/ftools/xselect/xselect.html" class="smallButton">Xselect</a></li>
+      <li><a href="/docs/software/xstar/xstar.html" class="smallButton">XSTAR</a></li>
+      <li><a href="/docs/heasarc/astro-update/" class="smallButton">ASTRO-Update</a></li>
+      <li><a href="/docs/heasarc/fits.html" class="siteMenuBottom-last-itm" style="min-width:55px;">FITS</a></li>
+            
+    </ul>
+  </div><!--id="siteMenuBottom"-->
+</div><!-- end navigation -->
+			<div id="content">
+          	<a name="skipping" id="skipping"></a>
+            	<div id="content-wrapper">
+                            <div class="maincontent" id="OneColumn">
+<div class="shim"></div>
+
+                                <div class="full-width-content-item"> 
+<script src="/docs/tagline.js" type="text/javascript" language="JavaScript"></script>
+<table width="100%">
+<tr><td style="vertical-align:top;">
+
+
+
+<link type="text/css" rel=stylesheet href="/docs/portal.css">
+<link rel="stylesheet" type="text/css" href="/docs/print.css" media="print">
+
+
+
+<style>
+        table.tablesorter td { padding: 3px; }
+        table.tablesorter tr.odd td { background: #ffeeee;}
+</style>
+
+<script type="text/javascript" src="inc/jquery/jquery-latest.js"></script> 
+<script type="text/javascript" src="inc/jquery/jquery.tablesorter.js"></script> 
+
+<script type="text/javascript" id="js">
+   $(document).ready(function() {
+      // call the tablesorter plugin
+      $("#astroupdate_software").tablesorter({
+      widgets: ['zebra']
+      }); 
+   }); 
+</script>
+
+<script type="text/javascript" id="js">
+   $(document).ready(function() {
+      // call the tablesorter plugin
+      $("#astroupdate_data").tablesorter({
+      widgets: ['zebra']
+      }); 
+   }); 
+</script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10809051-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+</head>
+<body topmargin="0" bgcolor="#000000" onload="init()">
+
+<a name="top"></a> 
+
+<br>
+<h1 align="center"><i>ASTRO-Update</i>: Keep your astronomy analysis software up-to-date</h1>
+<br>
+<a href="astro-update.rss"> <img src="/Images/icons/feed-icon-28x28.gif" border="0" width="14" alt="RSS"></a> 
+
+<!-- AddThis Button BEGIN -->
+<a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4ae9cead21d1de7e"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4ae9cead21d1de7e"></script>
+<!-- AddThis Button END -->
+
+<h2>Software Packages</h2>
+<i> Click the column headings to sort</i>
+<!-- (<a href="notifyme.html">notify me</a> if this page changes)<p> -->
+
+<table class="tablesorter"  width="100%" align="center" frame="border" id="astroupdate_software">
+<!-- <tr><th  bgcolor="yellow" colspan="4"><u>Software</u></th></tr> -->
+
+<thead>
+<tr>
+	<th><u>Name</u></th>
+	<th><u>Responsible Entity</u></th>
+	<th><u>Version</u></th>
+	<th><u>Last Update</u></th>
+
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+	<td><a href="http://heasarc.gsfc.nasa.gov/docs/xanadu/xspec/">XSPEC</a>:  X-ray spectral Analysis software</td>
+	<td>HEASARC</td>
+	<td align="center"><a href="http://heasarc.gsfc.nasa.gov/docs/xanadu/xspec/issues/issues.html">12.9.1</a></td>
+	<td>01/19/2017</td>
+</tr>
+
+<tr>
+	<td><a href="http://heasarc.gsfc.nasa.gov/docs/software/lheasoft/">HEASoft</a>: Multi-Mission High Energy Analysis software</td>
+	<td>HEASARC</td>
+	<td align="center"><a href="http://heasarc.gsfc.nasa.gov/docs/software/lheasoft/download.html"> 6.20</a></td>
+	<td>01/19/2017</td>
+</tr>
+
+<tr>
+	<td><a href="http://www.stsci.edu/institute/software_hardware/pyraf/">PyRAF </a>: Run IRAF tasks in Python</td>
+	<td>STScI</td>
+	<td align="center"><a href="http://www.stsci.edu/institute/software_hardware/pyraf/current/download"> 2.1.14</a></td>
+	<td>01/06/2017</td>
+</tr>
+
+<tr>
+	<td><a href="http://www.aips.nrao.edu/index.shtml">AIPS</a>: Astronomical Image Processing System</td>
+	<td>NRAO</td>
+	<td align="center"><a href="http://www.aips.nrao.edu/index.shtml#CURRENT_RELEASE"> 31DEC17</a></td>
+	<td>12/31/2016</td>
+</tr>
+
+<tr>
+	<td><a href="http://www.astropy.org">ASTROPY</a>: A single core package for Astronomy in Python </td>
+	<td>The Astropy Team</td>
+	<td align="center"><a href="http://astropy.readthedocs.org/en/stable/install.html"> 1.3 </a></td>
+	<td>12/23/2016</td>
+</tr>
+
+<tr>
+	<td><a href="http://heasarc.gsfc.nasa.gov/docs/software/tools/pimms.html">PIMMS</a>: Portable, Interactive Multi-Mission Simulator </td>
+	<td>HEASARC</td>
+	<td align="center"><a href="http://heasarc.gsfc.nasa.gov/docs/software/tools/pimms.html"> 4.8d</a></td>
+	<td>12/21/2016</td>
+</tr>
+
+<tr>
+	<td><a href="http://cxc.harvard.edu/ciao/download/">CIAO</a>: Chandra Interactive Analysis of Observations</td>
+	<td>CXC</td>
+	<td align="center"><a href="http://cxc.harvard.edu/ciao/download/">4.9 </a></td>
+	<td>12/16/2016</td>
+</tr>
+
+<tr>
+	<td><a href="http://ds9.si.edu">SAOImage ds9</a>: FITS image viewer and analyzer</td>
+	<td>SAO/HEASARC</td>
+	<td align="center"><a href="http://ds9.si.edu"> 7.5</a></td>
+	<td>12/15/2016</td>
+</tr>
+
+<tr>
+	<td><a href="http://space.mit.edu/CXC/MARX">MARX</a>: Chandra simulation software suite</td>
+	<td>CXC/MIT</td>
+	<td align="center"><a href="http://space.mit.edu/CXC/MARX/inbrief/install.html">5.3.2</a></td>
+	<td>12/14/2016</td>
+</tr>
+
+<tr>
+	<td><a href="http://www.eso.org/sci/software/pipelines/">VLT Instrument Pipelines</a>:  Data reduction for the most commonly used VLT/VLTI instrument modes</td>
+	<td>ESO</td>
+	<td align="center"><a href="http://www.eso.org/sci/software/pipelines/">13 December 2016 </a></td>
+	<td>12/13/2016</td>
+</tr>
+
+<tr>
+	<td><a href="http://skyview.gsfc.nasa.gov/current/cgi/titlepage.pl">Skyview</a>:  The Internet's Virtual Telescope</td>
+	<td>HEASARC</td>
+	<td align="center"><a href="http://skyview.gsfc.nasa.gov/current/cgi/titlepage.pl">3.2.2</a></td>
+	<td>12/13/2016</td>
+</tr>
+
+<tr>
+	<td><a href="http://www.gnu.org/software/gsl/">GSL</a>: GNU Scientific Library</td>
+	<td>Free Software Foundation</td>
+	<td align="center"><a href="http://www.gnu.org/software/gsl/">2.3</a></td>
+	<td>12/09/2016</td>
+</tr>
+
+<tr>
+	<td><a href="http://idlastro.gsfc.nasa.gov/homepage.html">IDLAUL</a>:IDL Astronomical Users Library</td>
+	<td>ASD/GSFC</td>
+	<td align="center"><a href="http://idlastro.gsfc.nasa.gov/news.html">08 December 2016</a></td>
+	<td>12/08/2016</td>
+</tr>
+
+<tr> 
+	<td><a href="http://atomdb.org">ATOMDB</a>: atomic database for X-ray plasma spectral modeling</td>
+	<td>CXC</td>
+	<td align="center"><a href="http://atomdb.org">3.0.7</a></td>
+	<td>12/08/2016</td>
+</tr>
+
+
+<tr>
+	<td><a href="http://www.eso.org/sci/software/scisoft/">SCISOFT</a>: An Astronomical Software Collection from ESO </td>
+	<td>ESO</td>
+	<td align="center"><a href="http://www.eso.org/sci/software/scisoft/">8 </a></td>
+	<td>12/01/2016</td>
+</tr>
+
+
+<tr>
+	<td><a href="http://xmm.esac.esa.int/xsa">XSA</a>: XMM-Newton Science Archive</td>
+	<td>XMM-SOC</td>
+	<td align="center"><a href="http://xmm.esac.esa.int/xsa">9.2</a></td>
+	<td>11/30/2016</td>
+</tr>
+
+<tr>
+	<td><a href="http://www.sron.nl/spex">SPEX</a>: SPEctral X-ray and UV modeling, analysis and fitting</td>
+	<td><a href="http://adsabs.harvard.edu/abs/1996uxsa.coll..411K">Kaastra, Mewe and Nieuwenhuijzen (1996)</a></td>
+	<td align="center"><a href="https://www.sron.nl/astrophysics-spex/download/"> 3.03.00</a></td>
+	<td>11/01/2016</td>
+</tr>
+
+<tr>
+	<td><a href="http://heasarc.gsfc.nasa.gov/docs/software/fitsio/fitsio.html">CFITSIO</a>: FITS file access subroutine library </td>
+	<td>HEASARC</td>
+	<td align="center"><a href="http://heasarc.gsfc.nasa.gov/docs/software/fitsio/fitsio.html"> 3.41 </a></td>
+	<td>11/01/2016</td>
+</tr>
+
+<tr>
+	<td><a href="http://visit.llnl.gov">VISIT</a>: Parallel Visualization and Graphical Analysis Tool</td>
+	<td>LLNL</td>
+	<td align="center"><a href="https://wci.llnl.gov/simulation/computer-codes/visit/downloads"> 2.12</a></td>
+	<td>11/01/2016</td>
+</tr>
+
+<tr>
+	<td><a href="http://casa.nrao.edu/index.shtml">CASA</a>: Common Astronomy Software Applications package</td>
+	<td>NRAO</td>
+	<td align="center"><a href="http://casa.nrao.edu/casa_obtaining.shtml"> 4.7.0-1</a></td>
+	<td>10/20/2016</td>
+</tr>
+
+<tr>
+	<td><a href="http://www.astro.psu.edu/xray/docs/TARA/ae_users_guide.html">ACIS_EXTRACT</a>: IDL-based ACIS analysis package</td>
+	<td>PSU</td>
+	<td align="center"><a href="http://www.astro.psu.edu/xray/docs/TARA/ae_users_guide.html"> 2016Sep22</a></td>
+	<td>09/22/2016</td>
+</tr>
+
+<tr>
+	<td><a href="http://www2.astro.psu.edu/xray/docs/TARA/code/">TARA</a>: Tools for ACIS Review &amp; Analysis</td>
+	<td>PSU</td>
+	<td align="center"><a href="http://www.astro.psu.edu/xray/docs/TARA/ae_users_guide.html"> 2016Sep26</a></td>
+	<td>09/16/2016</td>
+</tr>
+
+<tr>
+	<td><a href="http://space.mit.edu/CXC/isis/">ISIS</a>: Interactive Spectral Interpretation System</td>
+	<TD>CXC</TD>
+	<td align="center"><a href="http://space.mit.edu/CXC/isis/download.html"> 1.6.2-35</a></td>
+	<td>09/12/2016</td>
+</tr>
+
+<tr>
+	<td><a href="http://www.stsci.edu/hst/proposing/apt">APT</a>: Astronomers Proposal Tool</td>
+	<td>STScI</td>
+	<td align="center"><a href="http://www.stsci.edu/hst/proposing/apt"> 24.3 </a></td>
+	<td>08/22/2016</td>
+</tr>
+
+<tr>
+	<td><a href="http://heasarc.gsfc.nasa.gov/xamin/">Xamin</a>: Next Generation archive interface for high energy astrophysics </td>
+	<td>HEASARC</td>
+	<td align="center"><a href="http://heasarc.gsfc.nasa.gov/xamin/">3.5.1306</a></td>
+	<td>08/08/2016</td>
+</tr>
+
+
+<tr>
+	<td><a href="http://xmm.esac.esa.int/sas/">SAS</a>: XMM-Newton Science Analysis Software</td>
+	<td>XMM-SOC</td>
+	<td align="center"><a href="http://xmm.esac.esa.int/sas/current/download/"> 15.0.1</a></td>
+	<td>05/26/2016</td>
+</tr>
+
+<tr>
+	<td><a href="http://www.eso.org/sci/observing/phase2/P2PP3.html">P2PP</a>: ESO Phase II Proposal Preparation </td>
+	<td>ESO</td>
+	<td align="center"><a href="http://www.eso.org/sci/observing/phase2/P2PP3.html">3.4.2</a></td>
+	<td>04/19/2016</td>
+</tr>
+
+<tr>
+	<td><a href="http://www.atnf.csiro.au/people/mcalabre/WCS/index.html">WCSLIB</a>: World Coordinate System software library </td>
+	<td>Calabretta</td>
+	<td align="center"><a href="http://www.atnf.csiro.au/people/mcalabre/WCS/wcslib/">5.15</a></td>
+	<td>04/16/2016</td>
+</tr>
+
+<tr>
+	<td><a href="http://hea-www.cfa.harvard.edu/simx/index.html">SIMX</a>:  Potential Photons from Possible Satellites</td>
+	<td>CfA</td>
+	<td align="center"><a href="http://hea-www.cfa.harvard.edu/simx/download.html"> 2.4.1</a></td>
+	<td>03/28/2016</td>
+</tr>
+
+<tr>
+	<td><a href="http://aladin.u-strasbg.fr/">Aladin</a>: An interactive software sky atlas</td>
+	<td>CDS; ULP/CNRS </td>
+	<td align="center"><a href="http://aladin.u-strasbg.fr/java/nph-aladin.pl?frame=downloading">9.013</a></td>
+	<td>03/11/2016</td>
+</tr>
+
+<tr>
+	<td><a href="http://www.eso.org/sci/software/cpl/">CPL</a>: The Common Pipeline Library</td>
+	<td>ESO</td>
+	<td align="center"><a href="http://www.eso.org/sci/software/cpl/">7.0</a></td>
+	<td>02/26/2016</td>
+</tr>
+
+<tr>
+	<td><a href="http://www.eso.org/sci/software/esomidas/">MIDAS</a>: Munich Image Data Analysis System</td>
+	<td>ESO</td>
+	<td align="center"><a href="http://www.eso.org/sci/software/esomidas/"> 15Sepl1.0</a></td>
+	<td>02/19/2016</td> 
+</tr>
+<tr>
+	<td><a href="http://heasarc.gsfc.nasa.gov/docs/software/fitsio/ccfits/">CCfits</a>:  object oriented interface to cfitsio</td>
+	<td>HEASARC</td>
+	<td align="center"><a href="http://heasarc.gsfc.nasa.gov/docs/software/fitsio/ccfits/"> 2.5</a></td>
+	<td>01/19/2016</td>
+</tr>
+
+<tr>
+	<td><a href="http://cxc.harvard.edu/sherpa/">Sherpa</a>: Modeling and Fitting for CIAO</td>
+	<td>CXC</td>
+	<td align="center"><a href="http://cxc.harvard.edu/sherpa/updates.html">1</a></td>
+	<td>12/15/2015</td>
+</tr>
+
+
+<tr>
+	<td><a href="http://heasarc.gsfc.nasa.gov/docs/integral/inthp_analysis.html">OSA</a>: INTEGRAL Off-Line Scientific Analysis Software</td>
+	<TD>ISDC</TD>
+	<td align="center"><a href="http://isdc.unige.ch/integral/analysis#Software"> 10.2</a></td>
+	<td>12/10/2015</td>
+</tr>
+
+<tr>
+	<td><a href="http://users.monash.edu.au/~dprice/splash/index.html">SPLASH</a>: visualisation tool for output from (astrophysical) simulations</td>
+	<td>D. Price/Monash</td>
+	<td align="center"><a href="http://users.monash.edu.au/~dprice/splash/index.html">2.6.0</a></td>
+	<td>10/22/2015</td>
+</tr>
+
+<tr>
+	<td><a href="http://www.chianti.rl.ac.uk/">CHIANTI IDL package</a>: atomic database for X-ray plasma spectral modeling</td>
+	<td>GMU, U. Michigan and Cambridge</td>
+	<td align="center"><a href="http://www.chianti.rl.ac.uk/">8.0</a></td>
+	<td>09/12/2015</td>
+</tr>
+
+<tr>
+	<td><a href="http://heasarc.gsfc.nasa.gov/docs/software/lheasoft/ftools/fv/">fv</a>: Fits File Viewer</td>
+	<td>HEASARC</td>
+	<td align="center"><a href="http://heasarc.gsfc.nasa.gov/docs/software/lheasoft/ftools/fv/"> 5.4</a></td>
+	<td>09/01/2015</td>
+</tr>
+
+<tr>
+	<td><a href="http://hea-www.harvard.edu/PINTofALE/">PINTofALE</a>: Package for Interactive Analysis of Line Emission</td>
+	<td>Drake &amp; Kashyap/CXC</td>
+	<td align="center"><a href="http://hea-www.harvard.edu/PINTofALE/"> 2.96</a></td>
+	<td>08/10/2015</td>
+</tr>
+
+<tr>
+	<td><a href="http://ssc.spitzer.caltech.edu/warmmission/propkit/spot/">SPOT/LEOPARD</a>: plan Spitzer observations, access Spitzer archive </td>
+	<td>SSC</td>
+	<td align="center"><a href="http://ssc.spitzer.caltech.edu/warmmission/propkit/spot/">19.0 </a></td>
+	<td>08/05/2015</td>
+</tr>
+
+<tr>
+	<td><a href="http://fermi.gsfc.nasa.gov/ssc/data/analysis/software/">SAE</a>: Science Analysis Environment for Fermi </td>
+	<td>FSSC</td>
+	<td align="center"><a href="http://fermi.gsfc.nasa.gov/ssc/data/analysis/software/"> v10r0p5</a></td>
+	<td>06/24/2015</td>
+</tr>
+
+<!-- <tr>
+	<td><a href="http://ssb.stsci.edu/ureka/">Ureka</a>: useful astronomy software centered around Python and IRAF </td>
+	<td>STScI</td>
+	<td align="center"><a href="http://ssb.stsci.edu/ureka/1.5.1/">1.5.1</a></td>
+	<td>03/23/2015</td>
+</tr> -->
+
+<tr>
+	<td><a href="http://plasma-gate.weizmann.ac.il/Grace/">GRACE</a>: A 2D plotting tool</td>
+	<td>Weizmann</td>
+	<td align="center"><a href="http://plasma-gate.weizmann.ac.il/Grace/"> 5.1.25</a></td>
+	<td>02/14/2015</td>
+</tr>
+
+<tr>
+	<td><a href="http://www.eso.org/sci/software/gasgano/">GASGANO</a>: A Data File Organiser from ESO </td>
+	<td>ESO</td>
+	<td align="center"><a href="http://www.eso.org/sci/software/gasgano/">2.4.8</a></td>
+	<td>01/08/2015</td>
+</tr>
+
+
+<tr>
+	<td><a href="http://heasarc.gsfc.nasa.gov/webHera/">Web Hera</a>: On-line Analysis of HEASARC datasets </td>
+	<td>HEASARC</td>
+	<td align="center"><a href="http://heasarc.gsfc.nasa.gov/webHera/"> 3.0</a></td>
+	<td>08/25/2014</td>
+</tr>
+
+<tr>
+
+	<td><a href="http://starlink.eao.hawaii.edu/starlink">STARLINK</a> Software Collection</td>
+	<td>JAC</td>
+	<td align="center"><a href="http://starlink.eao.hawaii.edu/starlink">2014A</a></td>
+	<td>07/23/2014</td>
+</tr>
+
+<tr>
+	<td><a href="http://www.stsci.edu/resources/software_hardware/pyraf/stsci_python">STScI Python</a>: includes PyRAF,  PyFITS, Numdisplay, MultiDrizzle for HST</td>
+	<td>STScI</td>
+	<td align="center"><a href="http://www.stsci.edu/institute/software_hardware/pyraf/stsci_python/installation"> 2.15.1</a></td>
+	<td>04/01/2014</td>
+</tr>
+
+<tr>
+	<td><a href="http://lambda.gsfc.nasa.gov/toolbox/tb_camb_form.cfm">CAMB</a>: Code for Anisotropies in the Microwave Background</td>
+	<td>Lewis &amp; Challinor</td>
+	<td align="center"><a href="http://lambda.gsfc.nasa.gov/toolbox/tb_camb_form.cfm"> 4.5.1</a></td>
+	<td>04/01/2014</td>
+</tr>
+
+<tr>
+	<td><a href="http://www.ast.cam.ac.uk/~rgi/window.html">WINDOW TO THE STARS</a>: Graphical interface to the popular TWIN single/binary stellar evolution code </td>
+	<td>Izzard/Bonn</td>
+	<td align="center"><a href="http://www.ast.cam.ac.uk/~rgi/window.html">0.39</a></td>
+	<td>05/02/2014</td>
+</tr>
+
+<tr>
+	<td><a href="http://www.stsci.edu/resources/software_hardware/stsdas">STSDAS</a>: Space Telescope Science Data Analysis System</td>
+	<td>STScI</td>
+	<td align="center"><a href="http://www.stsci.edu/resources/software_hardware/stsdas"> 3.17</a></td>
+	<td>03/01/2014</td>
+</tr>
+
+<tr>
+	<td><a href="http://astro.dur.ac.uk/~pdraper/gaia/gaia.html">GAIA AND SKYCAT</a>: Graphic Astronomy and Image Analysis Tool</td>
+	<td>ESO</td>
+	<td align="center"><a href="http://astro.dur.ac.uk/~pdraper/gaia/gaia.html">4.4-4</a></td>
+	<td>05/30/2013</td>
+</tr>
+
+<tr>
+	<td><a href="http://ssc.spitzer.caltech.edu/dataanalysistools/tools/mopex/">MOPEX</a>: MOsaicker and Point source EXtractor (Spitzer)</td>
+	<td>SSC</td>
+	<td align="center"><a href="http://ssc.spitzer.caltech.edu/dataanalysistools/tools/mopex/">18.5.6 </a></td>
+	<td>10/10/2012</td>
+</tr> 
+
+
+<tr>
+	<td><a href="http://iraf.noao.edu/">IRAF</a>: Image Reduction and Analysis Facility</td>
+	<td>NOAO</td>
+	<td align="center"><a href="http://iraf.noao.edu/">2.16</a></td>
+	<td>03/22/2012</td>
+</tr>
+
+<tr>
+	<td><a href="http://galprop.stanford.edu/">GALPROP</a>: Galactic Cosmic Ray Propagation</td>
+	<td>Stanford</td>
+	<td align="center"><a href="http://galprop.stanford.edu/">54.1 </a></td>
+	<td>09/28/2011</td>
+
+</tr>
+
+<!-- <tr>
+	<td>DISLIN - scientific data plotting software (Commercial)</td>
+	<td>MPS</td>
+	<td align="center"><a href="http://www.mps.mpg.de/dislin/news.html">10.0 </a></td>
+	<td>27 Oct 2010</td>
+</tr> -->
+
+<!-- <tr>
+	<td><a href="http://cosmos.iasf-milano.inaf.it/pandora/">PANDORA</a>: Programs for AstroNomical Data Organization Reduction and Analysis </td>
+	<td>IASF</td>
+	<td align="center"><a href="http://cosmos.iasf-milano.inaf.it/pandora/"> 3.1</a></td>
+	<td>10/01/2010</td>
+
+</tr> -->
+
+<tr>
+	<td><a href="http://heasarc.gsfc.nasa.gov/FTP/heasarc/software/web_batch/browse_extract.pl">browse_extract.pl</a>: command-line query of HEASARC databases</td>
+	<td>HEASARC</td>
+	<td align="center"><a href="http://heasarc.gsfc.nasa.gov/FTP/heasarc/software/web_batch/browse_extract.pl">2.1a</a></td>
+	<td>09/20/2010</td>
+</tr>
+
+<tr>
+	<td><a href="http://heasarc.gsfc.nasa.gov/FTP/heasarc/software/web_batch/browse_extract_wget.pl">browse_extract_wget.pl</a>: command-line query of HEASARC databases, uses wget</td>
+	<td>HEASARC</td>
+	<td align="center"><a href="http://heasarc.gsfc.nasa.gov/FTP/heasarc/software/web_batch/browse_extract_wget.pl">2.2</a></td>
+	<td>09/07/2010</td>
+</tr>
+
+<tr>
+	<td><a href="http://heasarc.gsfc.nasa.gov/docs/xanadu/ximage/ximage.html">XIMAGE</a>: Image Analysis Software</td>
+	<td>HEASARC</td>
+	<td align="center"><a href="http://heasarc.gsfc.nasa.gov/docs/xanadu/ximage/ximage.html"> 4.5.1</a></td>
+	<td>03/29/2010</td>
+</tr>
+
+<tr>
+	<td><a href="http://www.astrogrid.org/">ASTROGRID VO DESKTOP</a>: Virtual Observatory Software for Astronomers </td>
+	<td>UK VOP</td>
+	<td align="center"><a href="http://www.astrogrid.org/">1.3.2</a></td>
+	<td>02/10/2010</td>
+</tr>
+
+	
+<tr>
+	<td><a HREF="http://heasarc.gsfc.nasa.gov/docs/software/xstar/xstar.html">XSTAR</a>: physical conditions and emission spectra of photoionized gases.</td>
+	<TD> Kallman/HEASARC</TD>
+	<td align="center"><a HREF="http://heasarc.gsfc.nasa.gov/docs/software/xstar/xstar.html"> 2.2</A></TD>
+	<TD>11/01/2009</TD>
+</tr>
+
+<tr>
+	<td><a href="http://heasarc.gsfc.nasa.gov/docs/xanadu/xronos/xronos.html">XRONOS</a>: Timing Analysis Software</td>
+	<td>HEASARC</td>
+	<td align="center"><a href="http://heasarc.gsfc.nasa.gov/docs/xanadu/xronos/xronos.html"> 5.22</a></td>
+	<td>08/21/2009</td>
+</tr>
+
+<!-- <tr>
+	<td><a href="http://irtarchive.jach.hawaii.edu/software/ukirtot/">UKIRT-OT</a>: Observing tool from the JACH </td>
+	<td>JAC</td>
+	<td align="center"><a href="http://irtarchive.jach.hawaii.edu/software/ukirtot/download.html">31 Jul 2009 </a></td>
+	<td>07/31/2009</td>
+</tr>
+ -->
+
+<!-- <tr>
+	<td><a href="http://www.thphys.uni-heidelberg.de/~robbers/cmbeasy/index.html">CMBEASY</a>:  calculate the evolution of density fluctuations in the universe</td>
+	<td>Heidelberg</td>
+	<td align="center"><a href="http://www.thphys.uni-heidelberg.de/~robbers/cmbeasy/index.html"> 4.4.1</a></td>
+	<td>05/13/2008</td>
+</tr> -->
+
+
+<tr>
+	<td><a href="http://www.atnf.csiro.au/research/pulsar/tempo2/">TEMPO2</a>: plan Spitzer observations, access Spitzer archive </td>
+	<td>ATNF</td>
+	<td align="center"><a href="http://www.atnf.csiro.au/research/pulsar/tempo2/">1.11 </a></td>
+	<td>01/17/2008</td>
+</tr>
+
+
+<tr>
+	<td><a href="http://heasarc.gsfc.nasa.gov/W3Browse/distrib/">W3Browse</a>: Astrophysics Observation Database and Archive browser</td>
+	<td>HEASARC</td>
+	<td align="center"><a href="http://heasarc.gsfc.nasa.gov/W3Browse/distrib/">8.4</a></td>
+	<td>10/09/2007</td>
+</tr>
+
+
+<tr>
+	<td><a href="http://heasarc.gsfc.nasa.gov/docs/software/profit/">PROFIT</a>: Visualize and Model Spectra</td>
+	<td>Smith/HEASARC</td>
+	<td align="center"><a href="http://heasarc.gsfc.nasa.gov/docs/software/profit/"> 2.0.0</a></td>
+	<td>08/07/2007</td>
+</tr>
+	
+
+<tr>
+	<td><a href="http://nova.astro.umd.edu/index.html">TLUSTY</a>: A user-oriented package for modelling stellar atmospheres and accretion disks and for stellar spectroscopic diagnostics  </td>
+	<td>Hubeny+Lanz</td>
+	<td align="center"><a href="http://nova.astro.umd.edu/index.html"> 202</a></td>
+	<td>10/19/2006</td>
+</tr>
+
+<tr>
+	<td><a href="http://nova.astro.umd.edu/Synspec43/synspec.html">SYNSPEC</a>: A user-oriented package for modeling stellar atmospheres and for stellar spectroscopic diagnostics </td>
+	<td>Hubeny+Lanz</td>
+	<td align="center"><a href="http://nova.astro.umd.edu/Synspec43/synspec.html">43</a></td>
+	<td>10/05/2005</td>
+</tr>
+
+<tr>
+
+	<td><a href="http://www.eso.org/sci/software/eclipse/">ECLIPSE</a>: ESO C Library for an Image Processing Software Environment </td>
+	<td>ESO</td>
+	<td align="center"><a href="http://www.eso.org/sci/software/eclipse/">5.0 </a></td>
+	<td>09/23/2005</td>
+</tr>
+
+<tr>
+	<td><a href="http://heasarc.gsfc.nasa.gov/docs/xanadu/xspec/xspec11/index.html">XSPEC 11</a>: Old-School X-ray spectral analysis software</td>
+	<td>HEASARC</td>
+	<td align="center"><a href="http://heasarc.gsfc.nasa.gov/docs/xanadu/xspec/xspec11/index.html"> 11.3.2</a></td>
+	<td>04/13/2005</td>
+</tr>
+
+ 
+<tr>
+	<td><a href="http://starview.sourceforge.net/">STARVIEW</a>: Setup a telescope and control from a web browser </td>
+	<td>NWACC</td>
+	<td align="center"><a href="http://starview.sourceforge.net/">0.1</a></td>
+	<td>12/17/2004</td>
+</tr>
+
+
+<tr>
+	<td><a href="http://sextractor.sourceforge.net/">SEXTRACTOR</a>: Builds catalogue of objects from an astronomical image</td>
+	<td>LANL</td>
+	<td align="center"><a href="http://sextractor.sourceforge.net/"> 2.3.1</a></td>
+	<td>04/09/2002</td>
+</tr>
+
+<tr>
+	<td><a href="http://www.mpe.mpg.de/xray/wave/exsas/exsas_index.php">EXSAS</a>: Extended X-ray Scientific Analysis System for ROSAT</td>
+	<td>MPE</td>
+	<td align="center"><a href="http://www.mpe.mpg.de/xray/wave/exsas/exsas_index.php"> 01APR_EXP</A></td>
+	<td>04/01/2001</td>
+</tr>
+
+<tr>
+	<td><a href="http://hea-www.harvard.edu/PROS/get_software.html">PROS</a>: Post-Reduction Off-line Software for X-ray data analysis</td>
+	<td>CfA</td>
+	<td align="center"><a href="http://hea-www.harvard.edu/PROS/get_software.html">2.5_p1</a></td>
+	<td>03/01/1998</td>
+</tr>
+
+
+<!-- <tr>
+	<td> GUIspec - A Java application to plot/analyse optical spectra</td>
+	<td></td>
+	<td align="center">x<a href="http://venus.ifca.unican.es/~xray/">x </a></td>
+	<td></td>
+</tr> -->
+ 
+ 
+<!-- <tr>
+	<td>SUPERMONGO - Interactive plotting program (Commercial) </td>
+	<td>supermongo.net</td>
+	<td align="center"><a href="http://www.supermongo.net/">2.4.16</a></td>
+	<td>03 Oct 2010</td>
+</tr> -->
+
+</tbody>
+</table>
+
+<br>
+<br>
+
+
+<h2>Associated Data</h2>
+
+<table class="tablesorter" width="100%" align="center" frame="border" id="astroupdate_data">
+<thead>
+<tr>	
+	<th><u>Name</u></th>
+	<th><u>Responsible Entity</u></th>
+	<th><u>Version</u></th>
+
+	<th><u>Posted</u></th>
+	<th><u>Latest Update</u></th>
+	<th><u>Comments</u></th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+	<td><a href="http://heasarc.gsfc.nasa.gov/docs/heasarc/caldb/caldb_intro.html">CALDB</a>: Calibration Data</td>
+	<td>HEASARC</td>
+	<td align="center"><a href="http://heasarc.gsfc.nasa.gov/docs/heasarc/caldb/caldb_supported_missions.html">Varies by mission</a></td>
+	<td>01/23/2017</td>
+	<td>01/20/2017</td>
+	<td><a href="/docs/heasarc/caldb/caldb_wotsnew.html#nustar_20170120">NuSTAR Clock Correction</a></td>
+</tr>
+
+<tr>
+
+	<td><a href="http://cxc.cfa.harvard.edu/caldb/">Chandra CALDB</a></td>
+	<td>CXC</td>
+	<td align="center"><a href="http://cxc.harvard.edu/caldb/">4.7.3</a></td>
+	<td>12/22/2016</td>
+	<td>12/15/2016</td>
+	<td>for use with CIAO 4.3 and higher</td>
+
+</tr>
+
+
+<tr>
+	<td><a href="http://www.chianti.rl.ac.uk/">CHIANTI</a>: atomic database for X-ray plasma spectral modeling</td>
+	<td>GMU, U. Michigan and Cambridge</td>
+	<td align="center"><a href="http://www.chianti.rl.ac.uk/">8.0</a></td>
+	<td>09/16/2015</td>
+	<td>09/12/2015</td>
+	<td>includes several new entries and revises the atomic data for many ions</td>
+
+</tr>
+
+<tr>
+	<td><a href="http://xmm2.esac.esa.int/external/xmm_sw_cal/calib/rel_notes/index.shtml">CCF</a>: Current Calibration File for XMM-Newton</td>
+	<TD>XMM SOC</TD>
+	<td align="center"> <a href="http://xmm2.esac.esa.int/external/xmm_sw_cal/calib/rel_notes/index.shtml">Varies by instrument</a></td>
+	<td>06/17/2010</td>
+	<td>06/17/2010</td>
+	<td>XMM-CCF-REL-266 & XMM-CCF-REL-265
+	</td>
+</tr>
+
+<!-- <tr>
+	<td><a href="http://cxc.cfa.harvard.edu/caldb3/download.html">Chandra CALDB3</a></td>
+	<td>CXC</td>
+	<td align="center"><a href="http://cxc.cfa.harvard.edu/caldb3/download.html">3.5.5</a></td>
+	<td>11/24/2009</td>
+	<td>09/18/2009</td>
+	<td>for use with Ciao 3.4 only</td>
+</tr>
+ -->
+
+</tbody>
+</table>
+
+<hr><p>
+
+<h3>Other astrophysics software resources</h3>
+<ul><li>SAO's list of 
+<a href="http://tdc-www.harvard.edu/astro.software.html">Astronomical Software on the Web</a></li>
+
+<li><a href="http://ascl.net/">The Astrophysics Source Code Library</a></li>
+
+<li> The <a href="http://bb.nightskylive.net/asterisk/viewforum.php?f=35">Engineering Deck</a> of Starship Asterisk: Computer Codes</li>
+
+<!-- <li>The <a href="https://www.astroshare.org/bin/view/AstroShare/WebHome">AstroShare</a> wiki: The software sharing resource site for astronomy professionals</li> -->
+
+<li><a href="http://www.astrobetter.com/">AstroBetter</a>: Tips and Tricks for Professional Astronomers
+</ul>
+
+<hr><p>
+
+Would you like your software package added to the Astro-Update list or have other comments?<br>  
+Send  a message to <a href="/cgi-bin/Feedback">General HEASARC Feedback</a>
+<br>
+<!--==============================================================-->
+Page author:
+<A target="_top" HREF="http://asd.gsfc.nasa.gov/Michael.Corcoran/">Michael F. 
+Corcoran</A><br>
+<!-- #LASTMODIFIED TEXT="Last modified" FORM="LONG" -->
+Last modified Tuesday, 09-Nov-2010 14:32:21 EST
+<!-- /#LASTMODIFIED -->
+
+</body>
+</html>

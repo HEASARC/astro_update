@@ -1,0 +1,13 @@
+{
+    "simx": {
+        "author_page": "http://hea-www.cfa.harvard.edu/simx/index.html", 
+        "pattern_marker": "version", 
+        "pattern_description": "one or more digits followed by zeror or 1 period followed by one or more digits", 
+        "version_url": "http://hea-www.cfa.harvard.edu/simx/download.html", 
+        "author": "CfA", 
+        "pattern": "\\d+\\.{0,1}\\d+", 
+        "home_url": "http://hea-www.cfa.harvard.edu/simx/index.html", 
+        "download_url": "http://hea-www.cfa.harvard.edu/simx/download.html", 
+        "description": "Potential Photons from Possible Satellites"
+    }
+}

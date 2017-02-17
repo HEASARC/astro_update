@@ -1,0 +1,13 @@
+{
+    "atomdb": {
+        "author_page": "http://atomdb.org", 
+        "pattern_marker": "version", 
+        "pattern_description": "one or more digits followed by zeror or 1 period followed by one or more digits", 
+        "version_url": "http://atomdb.org", 
+        "author": "CXC", 
+        "pattern": "\\d+\\.{0,1}\\d+", 
+        "home_url": "http://atomdb.org", 
+        "download_url": "http://atomdb.org", 
+        "description": "atomic database for X-ray plasma spectral modeling"
+    }
+}

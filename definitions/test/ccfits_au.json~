@@ -1,0 +1,13 @@
+{
+    "ccfits": {
+        "author_page": "http://heasarc.gsfc.nasa.gov/docs/software/fitsio/ccfits/", 
+        "pattern_marker": "version", 
+        "pattern_description": "one or more digits followed by zeror or 1 period followed by one or more digits", 
+        "version_url": "http://heasarc.gsfc.nasa.gov/docs/software/fitsio/ccfits/", 
+        "author": "HEASARC", 
+        "pattern": "\\d+\\.{0,1}\\d+", 
+        "home_url": "http://heasarc.gsfc.nasa.gov/docs/software/fitsio/ccfits/", 
+        "download_url": "http://heasarc.gsfc.nasa.gov/docs/software/fitsio/ccfits/", 
+        "description": "object oriented interface to cfitsio"
+    }
+}

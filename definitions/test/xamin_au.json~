@@ -1,0 +1,13 @@
+{
+    "xamin": {
+        "author_page": "http://heasarc.gsfc.nasa.gov/xamin/", 
+        "pattern_marker": "version", 
+        "pattern_description": "one or more digits followed by zeror or 1 period followed by one or more digits", 
+        "version_url": "http://heasarc.gsfc.nasa.gov/xamin/", 
+        "author": "HEASARC", 
+        "pattern": "\\d+\\.{0,1}\\d+", 
+        "home_url": "http://heasarc.gsfc.nasa.gov/xamin/", 
+        "download_url": "http://heasarc.gsfc.nasa.gov/xamin/", 
+        "description": "Next Generation archive interface for high energy astrophysics"
+    }
+}

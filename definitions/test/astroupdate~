@@ -1,0 +1,92 @@
+{"ACIS Extract": 
+{"pattern": "\\d{4}\\D{3}\\d{2}",
+"pattern_marker": "<a href='ae'",
+"pattern_description":"a 4-digit year followed by the 3-letter month abbreviation followed a 2-digit date",
+"home_url":"http://www2.astro.psu.edu/xray/docs/TARA/ae_users_guide.html",
+"download_url":"http://www.astro.psu.edu/xray/docs/TARA/code",
+"version_url":"http://www.astro.psu.edu/xray/docs/TARA/code",
+"description":"IDL software for analysis of Chandra/ACIS data",
+"author":"Broos et al.",
+"author_page":"http://www2.astro.psu.edu/xray/"}}
+
+{"Aladin": 
+{"pattern": "v\\d\.\\d?", 
+"pattern_marker": "Official version",
+"pattern_description":"a 'v' followed by a number followed by a dot followed by a number ",
+"home_url":"http://aladin.u-strasbg.fr/AladinDesktop/",
+"download_url":"http://aladin.u-strasbg.fr/AladinDesktop/#Download",
+"version_url":"http://aladin.u-strasbg.fr/java/nph-aladin.pl?frame=downloading",
+"description":"Desktop Observatory that allows the user to visualize and manipulate digitized astronomical images or full surveys",
+"author":"CDS",
+"author_page:"http://cds.u-strasbg.fr/"}}{"CASA": 
+{"pattern": "\\d+.\\d+.\\d+",, 
+"pattern_marker": "The latest CASA release ",
+"pattern_description":"a number followed by a dot followed by a number followed by a dot followed by a number",
+"home_url":"https://casa.nrao.edu/",
+"download_url":"https://casa.nrao.edu/casa_obtaining.shtml",
+"version_url":"https://casa.nrao.edu/",
+"description":"Common Astronomy Software Applications package",
+"author":"NRAO",
+"author_page:"http://www.nrao.edu"}}
+
+{"saoimage ds9": 
+{"pattern": "\\d\\.\\d?\\.?\\d?", 
+"pattern_marker": "SAOImage DS9 Version ",
+"pattern_description":"a digit followed by one or more periods followed by one or more periods followed by one or more digits",
+"home_url":"http://ds9.si.edu",
+"download_url":"http://ds9.si.edu/site/Download.html",
+"version_url":"http://ds9.si.edu/site/Home.html",
+"description":"Astronomical image display and analysis software",
+"author":"SAO/HEASARC"}}{"Aladin": 
+{"pattern": "\\d+.\\d+-\\d+", 
+"pattern_marker": "GAIA is currently at version",
+"pattern_description":"a number followed by a dot followed by a number followed by a dash followed by a number",
+"home_url":"http://astro.dur.ac.uk/~pdraper/gaia/gaia.html",
+"download_url":"http://starlink.eao.hawaii.edu/starlink",
+"version_url":"http://astro.dur.ac.uk/~pdraper/gaia/gaia.html",
+"description":"Highly interactive image display tool ",
+"author":"P. W. Draper",
+"author_page:"mailto:p.w.draper@durham.ac.uk"}}{"Gnu Scientific Library": 
+{"pattern": "\\d+\\.+\\d",
+"pattern_marker": "The current stable version is",
+"pattern_description":"one or more numbers followed by 0 or one dot followed by 0 or more numbers",
+"home_url":"http://www.gnu.org/software/gsl/",
+"download_url":" ftp://ftp.gnu.org/gnu/gsl/",
+"version_url":"http://www.gnu.org/software/gsl/",
+"description":"a numerical library for C and C++ programmers providing a wide range of mathematical routines",
+"author":"FSF",
+"author_page":"http://www.fsf.org/"}}
+
+{"PINT of ALE": 
+{"pattern": "\\d+\\.{0,1}\\d+",
+"pattern_marker": "The most recent version is",
+"pattern_description":"one or more numbers followed by 0 or one dot followed by 0 or more numbers",
+"home_url":"http://www.gnu.org/software/gsl/",
+"download_url":" ftp://ftp.gnu.org/gnu/gsl/",
+"version_url":"http://www.gnu.org/software/gsl/",
+"description":"a numerical library for C and C++ programmers providing a wide range of mathematical routines",
+"author":"FSF",
+"author_page":"http://www.fsf.org/"}}
+
+{"SExtractor": 
+{"pattern": "\\d+\\.+\\d+\\.+\\d+",
+"pattern_marker": "<a href='/projects/sextractor/files/latest/download?source=files' title=",
+"pattern_description":"one or more numbers followed by 0 or one dot followed by 0 or more numbers followed by 0 or one dot followed by 0 or more numbers",
+"home_url":"http://sextractor.sourceforge.net",
+"download_url":"https://sourceforge.net/projects/sextractor/files/",
+"version_url":"https://sourceforge.net/projects/sextractor/files/",
+"description":"Astronomical Source Extractor",
+"author":"Galassi and Starr ",
+"author_page":"mailto:rosalia@galassi.org"}}
+
+{"Browse": 
+{"pattern": "v\\d+\.+\d+",
+"pattern_marker": "v",
+"pattern_description":"a 'v' followed by one or more numbers followed by 0 or one dot followed by 0 or more numbers",
+"home_url":"http://heasarc.gsfc.nasa.gov/W3Browse/",
+"download_url":"http://www.astro.psu.edu/xray/docs/TARA/code",
+"version_url":"http://heasarc.gsfc.nasa.gov/W3Browse/version-history.html",
+"description":"Old-school access to the HEASARC catalogs and data",
+"author":"HEASARC",
+"author_page":"http://heasarc.gsfc.nasa.gov"}}
+

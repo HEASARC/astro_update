@@ -1,0 +1,13 @@
+{
+    "ciao": {
+        "author_page": "http://cxc.harvard.edu/ciao/download/", 
+        "pattern_marker": "version", 
+        "pattern_description": "one or more digits followed by zeror or 1 period followed by one or more digits", 
+        "version_url": "http://cxc.harvard.edu/ciao/download/", 
+        "author": "CXC", 
+        "pattern": "\\d+\\.{0,1}\\d+", 
+        "home_url": "http://cxc.harvard.edu/ciao/download/", 
+        "download_url": "http://cxc.harvard.edu/ciao/download/", 
+        "description": "Chandra Interactive Analysis of Observations"
+    }
+}
