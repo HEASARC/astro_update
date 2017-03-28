@@ -1,4 +1,3 @@
-from bs4 import BeautifulSoup
 import subprocess
 import os
 import glob
@@ -10,6 +9,7 @@ import requests
 import pandas as pd
 pd.set_option('display.max_colwidth', -1)
 from utils import html_to_pandas
+from bs4 import BeautifulSoup
 import jinja2
 
 def read_au_defs(defdir='/software/github/heasarc/astro_update/definitions',
@@ -106,7 +106,7 @@ def get_au_curvers(aud_df,software, strlen=100, open_url = False, parser='lxml')
             webbrowser.open(vurl)
     if newrel <> "Not Found":
         currel = parse_reldate(newrel)
-    return curver, currel
+    return curver.strip(), currel.strip()
 
 def make_astroupdate_page(outdir="/software/github/heasarc/astro_update/html",
                           defdir = '/software/github/heasarc/astro_update/definitions',
@@ -503,7 +503,9 @@ def write_newdefs(aud_df, outroot='astroupdate_defs',
     return fname
 
 def update_astroupdate(defdir='/software/github/heasarc/astro_update/definitions',
-                       deffile = 'astroupdate_defs_MASTER.json', clobber=True):
+                       deffile = 'astroupdate_defs_MASTER.json', clobber=True,
+                       outdir="/software/github/heasarc/astro_update/html",
+                       outname = "astro-update.html"):
     """
     Updates the astro-update definitions file then creates the astro-update webpage
     :param defdir: directory holding the astro-update definitions file
@@ -540,10 +542,10 @@ def update_astroupdate(defdir='/software/github/heasarc/astro_update/definitions
         newfname = newfile
     # now make the updated html page
     try:
-        make_astroupdate_page(outdir="/software/github/heasarc/astro_update/html",
+        make_astroupdate_page(outdir=outdir,
                               defdir=defdir,
                               deffile=newfname,
-                              outname='astro-update.html')
+                              outname=outname, clobber=clobber)
     except Exception, errmsg:
         status = -1
         sys.exit('Error creating astroupdate.html; Exiting ({0})'.format(errmsg))
@@ -630,7 +632,7 @@ if __name__ == '__main__':
     #main()
     #main_check()
     #main_curvers('pros', parser='html.parser')
-    #main_curvers('cloudy')
+    #main_curvers('iris')
     #main_curvers_complete()
     #main_update_ad()
     #make_astroupdate_page()
