@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Using Astro-Update software to update the HEASARC Astro-update page &#8212; astroupdate 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="List of astroupdate Functions" href="functions.html" />
+    <link rel="prev" title="Astro-Update User Guide" href="index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="using-astro-update-software-to-update-the-heasarc-astro-update-page">
+<h1>Using Astro-Update software to update the HEASARC Astro-update page<a class="headerlink" href="#using-astro-update-software-to-update-the-heasarc-astro-update-page" title="Permalink to this headline">¶</a></h1>
+<p>From the command line, run <code class="docutils literal"><span class="pre">update_astroupdate</span></code></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">update_astroupdate</span> <span class="o">--</span><span class="n">help</span>
+<span class="n">usage</span><span class="p">:</span> <span class="n">update_astroupdate</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">DefDir</span> <span class="n">DEFDIR</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">clobber</span><span class="p">]</span>
+                          <span class="p">[</span><span class="o">--</span><span class="n">DefFile</span> <span class="n">DEFFILE</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">outdir</span> <span class="n">OUTDIR</span><span class="p">]</span>
+                          <span class="p">[</span><span class="o">--</span><span class="n">outname</span> <span class="n">OUTNAME</span><span class="p">]</span>
+
+<span class="n">updates</span> <span class="n">the</span> <span class="n">astro</span><span class="o">-</span><span class="n">update</span> <span class="n">web</span> <span class="n">page</span>
+
+<span class="n">optional</span> <span class="n">arguments</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>         <span class="n">show</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span>
+  <span class="o">--</span><span class="n">DefDir</span> <span class="n">DEFDIR</span>    <span class="n">location</span> <span class="n">of</span> <span class="n">the</span> <span class="n">astro</span><span class="o">-</span><span class="n">update</span> <span class="n">definitions</span> <span class="n">database</span> <span class="n">file</span>
+                     <span class="p">(</span><span class="n">default</span> <span class="o">=</span>
+                     <span class="o">/</span><span class="n">software</span><span class="o">/</span><span class="n">github</span><span class="o">/</span><span class="n">heasarc</span><span class="o">/</span><span class="n">astro_update</span><span class="o">/</span><span class="n">definitions</span><span class="p">)</span>
+  <span class="o">--</span><span class="n">clobber</span>          <span class="n">overwrite</span> <span class="n">output</span> <span class="n">directory</span>
+  <span class="o">--</span><span class="n">DefFile</span> <span class="n">DEFFILE</span>  <span class="n">name</span> <span class="n">of</span> <span class="n">astro</span><span class="o">-</span><span class="n">update</span> <span class="n">definitions</span> <span class="n">database</span> <span class="n">file</span> <span class="p">(</span><span class="n">default</span> <span class="o">=</span>
+                     <span class="n">astroupdate_defs_MASTER</span><span class="o">.</span><span class="n">json</span><span class="p">)</span>
+  <span class="o">--</span><span class="n">outdir</span> <span class="n">OUTDIR</span>    <span class="n">location</span> <span class="n">of</span> <span class="n">output</span> <span class="n">html</span> <span class="n">file</span> <span class="p">(</span><span class="n">default</span> <span class="o">=</span>
+                     <span class="o">/</span><span class="n">software</span><span class="o">/</span><span class="n">github</span><span class="o">/</span><span class="n">heasarc</span><span class="o">/</span><span class="n">astro_update</span><span class="o">/</span><span class="n">html</span><span class="p">)</span>
+  <span class="o">--</span><span class="n">outname</span> <span class="n">OUTNAME</span>  <span class="n">name</span> <span class="n">of</span> <span class="n">output</span> <span class="n">astroupdate</span> <span class="n">html</span> <span class="n">file</span> <span class="p">(</span><span class="n">default</span> <span class="o">=</span> <span class="n">astro</span><span class="o">-</span>
+                     <span class="n">update</span><span class="o">.</span><span class="n">html</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">update_astroupdate</span></code> sets the path to the  astro-update definitions file, the astro_update file name (which generally should be
+<code class="docutils literal"><span class="pre">astroupdate_defs_MASTER.json</span></code>, though other definition files, for example from the last run of <code class="docutils literal"><span class="pre">update_astroupdate</span></code>,
+could be used), and the path to the output directory and the output file name (if the default filename is used you probably need to
+set &#8211;clobber = True to overwrite the file).</p>
+<p>Running <code class="docutils literal"><span class="pre">update_astroupdate</span></code> will:</p>
+<blockquote>
+<div><ul class="simple">
+<li>create a new json astro_update definitions file in the <code class="docutils literal"><span class="pre">DEFDIR</span></code> directory, with a name of the form <code class="docutils literal"><span class="pre">astroupdate_defs_20170511.json</span></code></li>
+<li>create a new html file in the <code class="docutils literal"><span class="pre">OUTDIR</span></code> (need to set <code class="docutils literal"><span class="pre">--clobber=True</span></code> if the file exists and you want to overwrite it).</li>
+</ul>
+</div></blockquote>
+<p>The  command <code class="docutils literal"><span class="pre">update_astroupdate</span></code> is a simple wrapper to the python function <code class="docutils literal"><span class="pre">update_astroupdate(defdir=defdir,</span> <span class="pre">deffile=deffile,</span> <span class="pre">clobber=clobber)</span></code>
+in the <code class="docutils literal"><span class="pre">astroupdate</span></code> module.  The python function <code class="docutils literal"><span class="pre">update_astroupdate(defdir=defdir,</span> <span class="pre">deffile=deffile,</span> <span class="pre">clobber=clobber)</span></code> does the following:</p>
+<blockquote>
+<div><ul class="simple">
+<li>runs <code class="docutils literal"><span class="pre">read_au_defs()</span></code> to create an astro-update pandas dataframe from the specified astro-update json definitions file</li>
+<li>gets all the software names from the dataframe; these are the names of the software being monitored by astro-update</li>
+<li>for each software name in the dataframe, gets the current version and current release date from the software maintainer&#8217;s website
+using <code class="docutils literal"><span class="pre">get_au_curvers()</span></code></li>
+<li>after that, creates a new json definitions file using the current values of version and release date for each software package</li>
+<li>then runs <code class="docutils literal"><span class="pre">make_astroupdate_page()</span></code> to actually make the astro-update webpage (stored in the directory specified by the <code class="docutils literal"><span class="pre">outdir</span></code>
+parameter)</li>
+</ul>
+</div></blockquote>
+<p>Release version 1.0</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How to use Astro-update</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">List of Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audef.html">The Software Definitions File</a></li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Astro-Update User Guide</a></li>
+      <li>Next: <a href="functions.html" title="next chapter">List of astroupdate Functions</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, M. F. Corcoran.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      
+      |
+      <a href="_sources/tutorial.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

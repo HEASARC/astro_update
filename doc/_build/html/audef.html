@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>The Astro-Update Definitions File &#8212; astroupdate 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="List of astroupdate Functions" href="functions.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="the-astro-update-definitions-file">
+<h1>The Astro-Update Definitions File<a class="headerlink" href="#the-astro-update-definitions-file" title="Permalink to this headline">¶</a></h1>
+<p>The astro-update definitions file is a json dictionary in which each monitored software package is a key in the json dictionary,
+with sub-keys providing needed information about the software.  For example the entries for <code class="docutils literal"><span class="pre">HEASoft</span></code>
+in the file <code class="docutils literal"><span class="pre">astroupdate_defs_MASTER.json</span></code> are:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;heasoft&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;release_pattern&quot;</span><span class="p">:</span> <span class="s2">&quot;[a-z,A-Z]+</span><span class="se">\\</span><span class="s2">s</span><span class="si">{1}</span><span class="se">\\</span><span class="s2">d{1,2},</span><span class="se">\\</span><span class="s2">s</span><span class="si">{1}</span><span class="se">\\</span><span class="s2">d</span><span class="si">{4}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Multi-Mission High Energy Analysis software&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;release_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://heasarc.gsfc.nasa.gov/docs/software/lheasoft/release_notes.html&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;HEASARC&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;pattern&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">d+</span><span class="se">\\</span><span class="s2">.{0,1}</span><span class="se">\\</span><span class="s2">d+&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;release_marker&quot;</span><span class="p">:</span> <span class="s2">&quot;RELEASE NOTES FOR HEASOFT&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ad_version&quot;</span><span class="p">:</span> <span class="s2">&quot;6.20&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;download_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://heasarc.gsfc.nasa.gov/docs/software/lheasoft/download.html&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;HEASoft&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;author_page&quot;</span><span class="p">:</span> <span class="s2">&quot;http://heasarc.gsfc.nasa.gov/docs/software/lheasoft/&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;pattern_marker&quot;</span><span class="p">:</span> <span class="s2">&quot;RELEASE NOTES FOR HEASOFT&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;pattern_description&quot;</span><span class="p">:</span> <span class="s2">&quot;one or more digits followed by zeror or 1 period followed by one or more digits&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;version_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://heasarc.gsfc.nasa.gov/docs/software/lheasoft/release_notes.html&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;release_description&quot;</span><span class="p">:</span> <span class="s2">&quot;(Full month name) (1-2 digit day of month), (4 digit year)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;home_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://heasarc.gsfc.nasa.gov/docs/software/lheasoft/&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ad_release_date&quot;</span><span class="p">:</span> <span class="s2">&quot;01/18/17&quot;</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+<p>The individual fields have the following meanings:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="9%" />
+<col width="33%" />
+<col width="58%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Element</th>
+<th class="head">Sample Value</th>
+<th class="head">Meaning</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>release_pattern</td>
+<td><code class="docutils literal"><span class="pre">[a-z,A-Z]+\\s{1}\\d{1,2},\\s{1}\\d{4}</span></code></td>
+<td>regular expression used to retrieve the <strong>release date</strong></td>
+</tr>
+<tr class="row-odd"><td>description</td>
+<td>Multi-Mission High Energy Analysis software</td>
+<td>Brief description of the software</td>
+</tr>
+<tr class="row-even"><td>release_url</td>
+<td><a class="reference external" href="http://heasarc.gsfc.nasa.gov/docs/software/lheasoft/release_notes.html">http://heasarc.gsfc.nasa.gov/docs/software/lheasoft/release_notes.html</a></td>
+<td>url to parse for ** release date**</td>
+</tr>
+<tr class="row-odd"><td>author:</td>
+<td>HEASARC</td>
+<td>astroupdate software author</td>
+</tr>
+<tr class="row-even"><td>pattern:</td>
+<td><code class="docutils literal"><span class="pre">\\d+\\.{0,1}\\d+</span></code></td>
+<td>regular expression used to retrieve the <strong>version string</strong></td>
+</tr>
+<tr class="row-odd"><td>release_marker:</td>
+<td>RELEASE NOTES FOR HEASOFT</td>
+<td>text marker which helps identify the <strong>release date string</strong></td>
+</tr>
+<tr class="row-even"><td>ad_version:</td>
+<td>6.20</td>
+<td>Software version string</td>
+</tr>
+<tr class="row-odd"><td>download_url</td>
+<td><a class="reference external" href="http://heasarc.gsfc.nasa.gov/docs/software/lheasoft/download.html">http://heasarc.gsfc.nasa.gov/docs/software/lheasoft/download.html</a></td>
+<td>the url from which you can download the software</td>
+</tr>
+<tr class="row-even"><td>name:</td>
+<td>HEASoft</td>
+<td>name of the software package</td>
+</tr>
+<tr class="row-odd"><td>author_page:</td>
+<td><a class="reference external" href="http://heasarc.gsfc.nasa.gov/docs/software/lheasoft/">http://heasarc.gsfc.nasa.gov/docs/software/lheasoft/</a></td>
+<td>url which contains information about the author of the software</td>
+</tr>
+<tr class="row-even"><td>pattern_marker:</td>
+<td>RELEASE NOTES FOR HEASOFT</td>
+<td>text marker which helps identify the <strong>version</strong></td>
+</tr>
+<tr class="row-odd"><td>pattern_description:</td>
+<td>one or more digits followed by zero or 1 period followed by digits</td>
+<td>description of the version pattern</td>
+</tr>
+<tr class="row-even"><td>version_url:</td>
+<td><a class="reference external" href="http://heasarc.gsfc.nasa.gov/docs/software/lheasoft/release_notes.html">http://heasarc.gsfc.nasa.gov/docs/software/lheasoft/release_notes.html</a></td>
+<td>url containing the version pattern</td>
+</tr>
+<tr class="row-odd"><td>release_description:</td>
+<td>(Full month name) (1-2 digit day of month), (4 digit year)</td>
+<td>description of the release date</td>
+</tr>
+<tr class="row-even"><td>home_url:</td>
+<td><a class="reference external" href="http://heasarc.gsfc.nasa.gov/docs/software/lheasoft/">http://heasarc.gsfc.nasa.gov/docs/software/lheasoft/</a></td>
+<td>homepage of the software website</td>
+</tr>
+<tr class="row-odd"><td>ad_release_date:</td>
+<td>01/18/17</td>
+<td>release data in astro-update format</td>
+</tr>
+</tbody>
+</table>
+<p>Release version 1.0</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">How to use Astro-update</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">List of Functions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The Software Definitions File</a></li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="functions.html" title="previous chapter">List of astroupdate Functions</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, M. F. Corcoran.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      
+      |
+      <a href="_sources/audef.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,9 +1,0 @@
-{"saoimage ds9": 
-{"pattern": "\\d\.\\d?\.?\\d?", 
-"pattern_marker": "SAOImage DS9 Version ",
-"pattern_description":"a digit followed by one or more periods followed by one or more periods followed by one or more digits",
-"home_url":"http://ds9.si.edu",
-"download_url":"http://ds9.si.edu/site/Download.html",
-"version_url":"http://ds9.si.edu/site/Home.html",
-"description":"Astronomical image display and analysis software",
-"author":"SAO/HEASARC"}}

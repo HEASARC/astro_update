@@ -8,16 +8,18 @@ import re
 import requests
 import pandas as pd
 pd.set_option('display.max_colwidth', -1)
-from utils import html_to_pandas
+#from utils import html_to_pandas
 from bs4 import BeautifulSoup
 import jinja2
 
 def read_au_defs(defdir='/software/github/heasarc/astro_update/definitions',
                  deffile='astroupdate_defs.json'):
-    """
-    returns a dictionary of values based on the entries in the astro-update software definition file
+    """ returns a pandas dataframe of astro-update software definitions
+    
+    returns a pandas dataframe version of the entries in the astro-update json software definition file
+    
     :param ausoftdef: name of software definition file
-    :return: aud_df, pandas dataframe of the astro-update software definitions
+    :return aud_df: pandas dataframe of the astro-update software definitions
     """
     ausoftdef = '{0}/{1}'.format(defdir, deffile)
     audict = json.load(open(ausoftdef, mode='r'))
@@ -25,19 +27,26 @@ def read_au_defs(defdir='/software/github/heasarc/astro_update/definitions',
     return aud_df
 
 def get_au_curvers(aud_df,software, strlen=100, open_url = False, parser='lxml'):
-    """
-    from the astro-update dataframe, gets the version for the specified software from
-    the software maintainer's webpage
-    parses software's version_url page and returns current version of the software
+    """ gets the version for the specified software
+    
+    From the astro-update dataframe (as created by read_au_defs()), gets the version for the specified software from
+    the software maintainer's webpage, parses software's version_url page and returns current version and current
+    release date of the software
+    
     :param aud_df: input astro_update dataframe (from read_au_defs)
     :param sofware: input name of software pacakage (as indexed in the dataframe
     :param strlen: number of characters after pattern_marker to search for version string
-    :return: curver, currel = current version and release date of software; if current version can't be
-    determined, value is set to 'Not Found'
+    :param open_url: if True will open the URL containing the version information for the specified software
+    :param parser: html parser to be used by BeautifulSoup (default = "lxml")
+    :return: curver, currel = current version and current release date of software; 
+        if current version  or current release can't be determined, their value is set to 'Not Found'
     """
     # initialize curver, currel to current values in the astroupdate defs file
     curver = aud_df.loc[software].ad_version
     currel = aud_df.loc[software].ad_release_date
+    #
+    # get current software version from version_url
+    #
     try:
         vurl = aud_df.loc[software].version_url
     except KeyError, errmsg:
@@ -114,8 +123,22 @@ def make_astroupdate_page(outdir="/software/github/heasarc/astro_update/html",
                           outname ='astro-update.html',
                           templatedir = "/software/github/heasarc/astro_update/templates",
                           clobber=True):
-    """
-    Creates an html table for astro-update based on the information in the defdir/deffile files
+    """Creates the astro-update.html web page
+    
+    Creates the astro-update.html web page using python's Jinja2 templating engine 
+    based on the information in the ``<defdir>/<deffile>`` file
+    
+    Templates::
+    
+        astroupdate_table_template.html: the astro-update html table
+        astroupdate_template.html: base template
+ 
+    :param outdir: output directory where <outname> file is written
+    :param defdir: directory where the json definition file is  stored
+    :param deffile: name of json definitions file in defdir to use
+    :param outname: name of output html file 
+    :param templatedir: directory where jinja2 templates are stored
+    :param clobber: overwrite file if True, else don't overwrite
     :return: status (0 = ok, -1 = exception)
     """
     status = 0
@@ -154,10 +177,14 @@ def make_astroupdate_page(outdir="/software/github/heasarc/astro_update/html",
     return
 
 def astroupdate_dict(url="http://heasarc.gsfc.nasa.gov/docs/heasarc/astro-update/"):
-    """
-    Returns a dictionary of software packages monitored by Astro-Update
-    :param url: astro-update URL
-    :return:
+    """retrieve astroupdate dictionary
+    
+    Returns a dictionary of software packages monitored by Astro-Update based on the contents of the specified
+    astro-update html file
+    
+    :param url: astro-update URL from which dictionary will be obtained
+    :return: astro-update python dictionary 
+    
     """
     from bs4 import BeautifulSoup
     import urllib2
@@ -183,15 +210,16 @@ def astroupdate_dict(url="http://heasarc.gsfc.nasa.gov/docs/heasarc/astro-update
 
 
 def astroupdate(software, chatter=0):
-    """
+    """return the current astro-update version and other info for specified software
+    
     If a specified software package is monitored in astro-update,
     this will return the current astro-update version, date of last update, the
     software author, and the url to download the latest update,
-    as specified on the astro-update web page
+    from the astro-updated web dictionary returned by astroupdate_dict()
 
-    :param software: name of software package to check
+    :param software: name of software package to check (as given by the astro-update json definitions file)
     :param chatter: verbosity
-    :return:
+    :return: dictionary entry of software information
     """
     aud=astroupdate_dict()
     softkey=software.strip().lower()
@@ -217,16 +245,18 @@ def astroupdate(software, chatter=0):
     return aud[softkey]
 
 
-
 def auto_update(software):
-    """
-    for the specified software, notify the user if their installed version is up-to-date; if not,
+    """notify the user if their installed version of specified software is up-to-date
+    
+    For the specified software, notify the user if their installed version is up-to-date; if not,
     give the user the option of downloading the latest version (by taking the user to the
-    software download page in their web browser)
+    software download page in their web browser).
+
 
     :param software: name of software to check
-    :return:
+    :return: (no output)
     """
+
     ad = astroupdate_dict()
     software = software.strip().lower()
     try:
@@ -338,13 +368,15 @@ def auto_update(software):
 
     return
 
-def aud_check(url="http://heasarc.gsfc.nasa.gov/docs/heasarc/astro-update/", soft=""):
-    """
-    this does a manual check of software monitored by astro-update to verify that the version on
-    the astro-update page is up to date; it returnes a list of software that needs to be updated,
-    along with the new version number
-    :param url:
-    :param soft: an array of software titles (for eg: ['heasoft']
+def aud_check(url="https://heasarc.gsfc.nasa.gov/docs/heasarc/astro-update/astro-update.html", soft=""):
+    """A visual inspection of software monitored by astro-update (**Deprecated**)
+    
+    This function checks the speficied astro-update web page given by  <url> and displays the version page
+    so that the user can visually check that the version on the astro-update page is current.  **This routine has been
+    deprecated**.
+    
+    :param url: the (usually) public url of the astro-update web page
+    :param soft: an array of software titles (for eg: ['heasoft']) that have out of date versions
     :return:
     """
     aud = astroupdate_dict(url=url)
@@ -367,12 +399,15 @@ def aud_check(url="http://heasarc.gsfc.nasa.gov/docs/heasarc/astro-update/", sof
 
 def aud_init_defs(software, aud_url="http://heasarc.gsfc.nasa.gov/docs/heasarc/astro-update/",
                   fdir='/software/github/heasarc/astro_update/definitions/TEST', clobber=True):
-    """
-    Creates the initial astro-update definitions file for software listed on the astro-update page
+    """ Initialize the astro-update definitions file (**Deprecated**) 
+    
+    Creates the initial astro-update definitions file for software listed on the astro-update page.  
+    This was written to help create the initial json definitions file but is no longer needed
+    
     :param software: name of software to be added (Mixed case allowed)
     :param aud_url: url of the astro-update file
     :param fdir: file output directory
-    :return:
+    :return: (no return value)
     """
     req = requests.get(aud_url)
     ausoup = BeautifulSoup(req.text,'lxml')
@@ -439,9 +474,11 @@ def aud_init_defs(software, aud_url="http://heasarc.gsfc.nasa.gov/docs/heasarc/a
     return
 
 def aud_table_update(software, new_version, update_date, aud_url = 'http://heasarc.gsfc.nasa.gov/docs/heasarc/astro-update'):
-    """
-    Gets the astro-update table, updates version of software and date of update, then returns a BeautifulSoup table
-    with updated information
+    """ Turns astro-update html software table to a BeautifuSoup table object (**Deprecated?**)
+    
+    Gets the astro-update table, updates version of software and date of update, then returns a BeautifulSoup table object
+    with updated information (**deprecated?**)
+    
     :param software: software package to update (eg. heasoft)
     :param new_version: version number of latest update
     :param update_date: data of new update
@@ -449,13 +486,14 @@ def aud_table_update(software, new_version, update_date, aud_url = 'http://heasa
     :return:
     """
     # get html with requests
-    req = requests.get(aud_url)
+    # req = requests.get(aud_url)
     # create soup and extract table
-    audtable = BeautifulSoup(req.text, 'lxml')('table')[1] # software table is table 1 on the page
+    # audtable = BeautifulSoup(req.text, 'lxml')('table')[1] # software table is table 1 on the page
     # TODO: update row or add new row
     #
     # then create dataframe
-    auddf = html_to_pandas(audtable)
+    auddf =  pd.read_html(aud_url, attrs={'id':'astroupdate_software'})
+    auddf = auddf[0] # read_html seems to return a list so select 1st element
     # sort dataframe by time of last update, descending
     # first create sort column called sortdate
     auddf['sortdate'] = pd.to_datetime(auddf['Last Update'])
@@ -467,9 +505,13 @@ def aud_table_update(software, new_version, update_date, aud_url = 'http://heasa
     return soup
 
 def parse_reldate(date):
-    """
-    parses the release date
-    :param date release date of form understood by dateutil.parser
+    """parses the release date
+    
+    Parses the release date using dateutil to convert to the astro-update standard format (MM/DD/YYYY)
+    
+    **I believe this is not complete and could be removed**
+    
+    :param date: release date of form understood by dateutil.parser
     :return: TODO: Date object (or maybe a formatted date string?)
     """
     from dateutil.parser import parse
@@ -483,13 +525,15 @@ def parse_reldate(date):
 def write_newdefs(aud_df, outroot='astroupdate_defs',
                   defdir='/software/github/heasarc/astro_update/definitions',
                   clobber = False):
-    """
-    outputs the astro-update dataframe as a json astro-update definitions file
+    """ Creates json astro-update.defs file updated with current software version/release date
+    
+    Outputs the astro-update dataframe as a json astro-update definitions file
+    
     :param aud_df: astro-update dataframe
     :param outroot:  file rootname (default = 'astroupdate_defs')
     :param defdir: file ouptput directory
     :param clobber: if True, will overwrite an existing file
-    :return: returns filename
+    :return: name of output file
     """
     import datetime
     now = datetime.datetime.now()
@@ -506,13 +550,17 @@ def update_astroupdate(defdir='/software/github/heasarc/astro_update/definitions
                        deffile = 'astroupdate_defs_MASTER.json', clobber=True,
                        outdir="/software/github/heasarc/astro_update/html",
                        outname = "astro-update.html"):
-    """
-    Updates the astro-update definitions file then creates the astro-update webpage
-    :param defdir: directory holding the astro-update definitions file
-    :return: status (0=ok, -1 = exception)
+    """Updates the astro-update definitions file then creates the astro-update webpage
+    
+    :param defdir: full path to directory where json definitions file is stored
+    :param deffile: name of json definitions file in <defdir> to use
+    :param clobber: overwrith astro-update.html file if True
+    :param outdir: output directory for astro-update.html file
+    :param outname: name of output file (default = astro-update.html)
+    :return: status (0 if no errors encountered)
     """
     #adj  = json.load(open('{0}/astroupdate_defs.json'.format(defdir),'r')) #load as json dictionary
-    aud = read_au_defs(deffile=deffile)
+    aud = read_au_defs(deffile=deffile, defdir=defdir)
     #aud = aud.loc[['spex']]
     software = aud.index.values
     status = 0
@@ -632,8 +680,8 @@ if __name__ == '__main__':
     #main()
     #main_check()
     #main_curvers('pros', parser='html.parser')
-    #main_curvers('iris')
+    main_curvers('xsa')
     #main_curvers_complete()
     #main_update_ad()
     #make_astroupdate_page()
-    update_astroupdate()
+    #update_astroupdate()
