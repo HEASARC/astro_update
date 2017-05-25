@@ -171,8 +171,6 @@ def make_astroupdate_page(outdir="/software/github/heasarc/astro_update/html",
         return status
     print "Wrote {0}".format(fname)
     return status
-
-
     print "Wrote {0}/{1}".format(outdir, outname)
     return
 
@@ -571,13 +569,16 @@ def update_astroupdate(defdir='/software/github/heasarc/astro_update/definitions
             parser = 'lxml'
         curvers, currel = get_au_curvers(aud, s, parser=parser)
         # only update if both curvers and currel found
-        if curvers<>"Not Found" and currel <> "Not Found":
+        if curvers<>"Not Found":
             print "Updating {0} Current version to {1}".format(s, curvers)
             aud.loc[s].ad_version = curvers
+        else:
+            print("Could not retrieve release version for {0}".format(s))
+        if curvers <> "Not Found":
             print "Updating {0} Current release to {1}".format(s, currel)
             aud.loc[s].ad_release_date = currel
         else:
-            print("Could not retrieve versions for {0}".format(s))
+            print("Could not retrieve release date for {0}".format(s))
     print "writing updated defs file"
     newfile = write_newdefs(aud, defdir=defdir, clobber=True)
     print "Successfully wrote {0}".format(newfile)
@@ -680,7 +681,7 @@ if __name__ == '__main__':
     #main()
     #main_check()
     #main_curvers('pros', parser='html.parser')
-    main_curvers('xsa')
+    main_curvers('soxs')
     #main_curvers_complete()
     #main_update_ad()
     #make_astroupdate_page()
