@@ -14,8 +14,6 @@
 </thead>
 
 <tbody>
-
-
     {% for software in audef.index.values %}
         {% if audef.loc[software].ad_release_date is defined %}
             <tr>
@@ -28,6 +26,4 @@
     {% endfor %}
 {%- endblock %}
 
-</tbody>
-</table>
 
