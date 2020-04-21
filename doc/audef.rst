@@ -1,5 +1,6 @@
-The Astro-Update Definitions File
-==================================
+The Software Definitions File
+=============================
+
 
 The astro-update definitions file is a json dictionary in which each monitored software package is a key in the json dictionary,
 with sub-keys providing needed information about the software.  For example the entries for ``HEASoft``
@@ -24,15 +25,16 @@ in the file ``astroupdate_defs_MASTER.json`` are::
             "ad_release_date": "01/18/17"
         }
 
+
 The individual fields have the following meanings:
 
 
 ==================== 	=======================================================================      ========================================================
 Element         		Sample Value                                   								 Meaning
 ==================== 	=======================================================================      ========================================================
-release_pattern 		``[a-z,A-Z]+\\s{1}\\d{1,2},\\s{1}\\d{4}``										 regular expression used to retrieve the **release date**
+release_pattern 		``[a-z,A-Z]+\\s{1}\\d{1,2},\\s{1}\\d{4}``								     regular expression used to retrieve the **release date**.  The release date is the (approximate) date of the release of the listed version of the software.
 description 			Multi-Mission High Energy Analysis software 								 Brief description of the software
-release_url             http://heasarc.gsfc.nasa.gov/docs/software/lheasoft/release_notes.html       url to parse for ** release date**
+release_url             http://heasarc.gsfc.nasa.gov/docs/software/lheasoft/release_notes.html       url to parse for **release date**.
 author: 				HEASARC 																	 astroupdate software author
 pattern: 				``\\d+\\.{0,1}\\d+``  														 regular expression used to retrieve the **version string**
 release_marker: 		RELEASE NOTES FOR HEASOFT													 text marker which helps identify the **release date string**

@@ -1,12 +1,13 @@
 #! /usr/bin/env python
 
-from heasarc import astroupdate as ad
+from heasarc.astro_update import astroupdate as ad
 import argparse
 
 if __name__ == "__main__":
-    defdir = "/software/github/heasarc/astro_update/definitions"
+    defdir = "/Users/mcorcora/software/github/heasarc/astro_update/definitions"
     deffile = "astroupdate_defs_MASTER.json"
-    outdir = "/software/github/heasarc/astro_update/html"
+    templatedir = "/Users/mcorcora/software/github/heasarc/astro_update/templates"
+    outdir = "/Users/mcorcora/software/github/heasarc/astro_update/html"
     outname = "astro-update.html"
     parser = argparse.ArgumentParser(description='updates the astro-update web page')
     parser.add_argument('--DefDir', type=str,
@@ -16,14 +17,20 @@ if __name__ == "__main__":
     parser.add_argument("--DefFile", type = str,
                         help = "name of astro-update definitions database file (default = {0})".format(deffile),
                         default = deffile)
-    parser.add_argument("--outdir", type=str,
+    parser.add_argument("--OutDir", type=str,
                         help = "location of output html file (default = {0})".format(outdir),
                         default = outdir)
-    parser.add_argument("--outname", type=str,
+    parser.add_argument("--OutName", type=str,
                         help = "name of output astroupdate html file (default = {0})".format(outname),
                         default = outname)
+    parser.add_argument('--TemplateDir', type=str,
+                        help='location of the astro-update html templates (default = {0})'.format(templatedir),
+                        default = templatedir)
     args = parser.parse_args()
     clobber = args.clobber
     defdir = args.DefDir
     deffile = args.DefFile
-    status = ad.update_astroupdate(defdir=defdir, deffile=deffile, clobber=clobber)
+    templatedir = args.TemplateDir
+    outdir = args.OutDir
+    outname = args.OutName
+    status = ad.update_astroupdate(defdir=defdir, deffile=deffile, templatedir=templatedir,outname = outname, outdir=outdir, clobber=clobber)

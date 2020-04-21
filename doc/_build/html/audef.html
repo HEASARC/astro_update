@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>The Astro-Update Definitions File &#8212; astroupdate 1.0 documentation</title>
-    
+    <title>The Software Definitions File &#8212; astroupdate 1.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
@@ -24,7 +21,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="List of astroupdate Functions" href="functions.html" />
@@ -33,15 +30,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
 
   </head>
-  <body role="document">  
+  <body>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="the-astro-update-definitions-file">
-<h1>The Astro-Update Definitions File<a class="headerlink" href="#the-astro-update-definitions-file" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="the-software-definitions-file">
+<h1>The Software Definitions File<a class="headerlink" href="#the-software-definitions-file" title="Permalink to this headline">¶</a></h1>
 <p>The astro-update definitions file is a json dictionary in which each monitored software package is a key in the json dictionary,
 with sub-keys providing needed information about the software.  For example the entries for <code class="docutils literal"><span class="pre">HEASoft</span></code>
 in the file <code class="docutils literal"><span class="pre">astroupdate_defs_MASTER.json</span></code> are:</p>
@@ -68,9 +65,9 @@ in the file <code class="docutils literal"><span class="pre">astroupdate_defs_MA
 <p>The individual fields have the following meanings:</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="9%" />
-<col width="33%" />
-<col width="58%" />
+<col width="7%" />
+<col width="25%" />
+<col width="68%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Element</th>
@@ -81,7 +78,7 @@ in the file <code class="docutils literal"><span class="pre">astroupdate_defs_MA
 <tbody valign="top">
 <tr class="row-even"><td>release_pattern</td>
 <td><code class="docutils literal"><span class="pre">[a-z,A-Z]+\\s{1}\\d{1,2},\\s{1}\\d{4}</span></code></td>
-<td>regular expression used to retrieve the <strong>release date</strong></td>
+<td>regular expression used to retrieve the <strong>release date</strong>.  The release date is the (approximate) date of the release of the listed version of the software.</td>
 </tr>
 <tr class="row-odd"><td>description</td>
 <td>Multi-Mission High Energy Analysis software</td>
@@ -89,7 +86,7 @@ in the file <code class="docutils literal"><span class="pre">astroupdate_defs_MA
 </tr>
 <tr class="row-even"><td>release_url</td>
 <td><a class="reference external" href="http://heasarc.gsfc.nasa.gov/docs/software/lheasoft/release_notes.html">http://heasarc.gsfc.nasa.gov/docs/software/lheasoft/release_notes.html</a></td>
-<td>url to parse for ** release date**</td>
+<td>url to parse for <strong>release date</strong>.</td>
 </tr>
 <tr class="row-odd"><td>author:</td>
 <td>HEASARC</td>
@@ -187,7 +184,7 @@ in the file <code class="docutils literal"><span class="pre">astroupdate_defs_MA
       &copy;2017, M. F. Corcoran.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.5</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.4</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
       
       |

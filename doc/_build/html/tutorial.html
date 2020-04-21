@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Using Astro-Update software to update the HEASARC Astro-update page &#8212; astroupdate 1.0 documentation</title>
-    
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
@@ -24,7 +21,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="List of astroupdate Functions" href="functions.html" />
@@ -34,7 +31,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
 
   </head>
-  <body role="document">  
+  <body>  
 
     <div class="document">
       <div class="documentwrapper">
@@ -68,7 +65,7 @@
 <p><code class="docutils literal"><span class="pre">update_astroupdate</span></code> sets the path to the  astro-update definitions file, the astro_update file name (which generally should be
 <code class="docutils literal"><span class="pre">astroupdate_defs_MASTER.json</span></code>, though other definition files, for example from the last run of <code class="docutils literal"><span class="pre">update_astroupdate</span></code>,
 could be used), and the path to the output directory and the output file name (if the default filename is used you probably need to
-set &#8211;clobber = True to overwrite the file).</p>
+set –clobber = True to overwrite the file).</p>
 <p>Running <code class="docutils literal"><span class="pre">update_astroupdate</span></code> will:</p>
 <blockquote>
 <div><ul class="simple">
@@ -82,7 +79,7 @@ in the <code class="docutils literal"><span class="pre">astroupdate</span></code
 <div><ul class="simple">
 <li>runs <code class="docutils literal"><span class="pre">read_au_defs()</span></code> to create an astro-update pandas dataframe from the specified astro-update json definitions file</li>
 <li>gets all the software names from the dataframe; these are the names of the software being monitored by astro-update</li>
-<li>for each software name in the dataframe, gets the current version and current release date from the software maintainer&#8217;s website
+<li>for each software name in the dataframe, gets the current version and current release date from the software maintainer’s website
 using <code class="docutils literal"><span class="pre">get_au_curvers()</span></code></li>
 <li>after that, creates a new json definitions file using the current values of version and release date for each software package</li>
 <li>then runs <code class="docutils literal"><span class="pre">make_astroupdate_page()</span></code> to actually make the astro-update webpage (stored in the directory specified by the <code class="docutils literal"><span class="pre">outdir</span></code>
@@ -132,7 +129,7 @@ parameter)</li>
       &copy;2017, M. F. Corcoran.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.5</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.4</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
       
       |

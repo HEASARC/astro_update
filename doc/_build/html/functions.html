@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>List of astroupdate Functions &#8212; astroupdate 1.0 documentation</title>
-    
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
@@ -24,17 +21,17 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="The Astro-Update Definitions File" href="audef.html" />
+    <link rel="next" title="The Software Definitions File" href="audef.html" />
     <link rel="prev" title="Using Astro-Update software to update the HEASARC Astro-update page" href="tutorial.html" />
    
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
 
   </head>
-  <body role="document">  
+  <body>  
 
     <div class="document">
       <div class="documentwrapper">
@@ -56,8 +53,8 @@ from the astro-updated web dictionary returned by astroupdate_dict()</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>software</strong> &#8211; name of software package to check (as given by the astro-update json definitions file)</li>
-<li><strong>chatter</strong> &#8211; verbosity</li>
+<li><strong>software</strong> – name of software package to check (as given by the astro-update json definitions file)</li>
+<li><strong>chatter</strong> – verbosity</li>
 </ul>
 </td>
 </tr>
@@ -78,7 +75,7 @@ astro-update html file</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>url</strong> &#8211; astro-update URL from which dictionary will be obtained</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>url</strong> – astro-update URL from which dictionary will be obtained</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">astro-update python dictionary</td>
 </tr>
@@ -98,8 +95,8 @@ deprecated</strong>.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>url</strong> &#8211; the (usually) public url of the astro-update web page</li>
-<li><strong>soft</strong> &#8211; an array of software titles (for eg: [&#8216;heasoft&#8217;]) that have out of date versions</li>
+<li><strong>url</strong> – the (usually) public url of the astro-update web page</li>
+<li><strong>soft</strong> – an array of software titles (for eg: [‘heasoft’]) that have out of date versions</li>
 </ul>
 </td>
 </tr>
@@ -121,9 +118,9 @@ This was written to help create the initial json definitions file but is no long
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>software</strong> &#8211; name of software to be added (Mixed case allowed)</li>
-<li><strong>aud_url</strong> &#8211; url of the astro-update file</li>
-<li><strong>fdir</strong> &#8211; file output directory</li>
+<li><strong>software</strong> – name of software to be added (Mixed case allowed)</li>
+<li><strong>aud_url</strong> – url of the astro-update file</li>
+<li><strong>fdir</strong> – file output directory</li>
 </ul>
 </td>
 </tr>
@@ -145,10 +142,10 @@ with updated information (<strong>deprecated?</strong>)</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>software</strong> &#8211; software package to update (eg. heasoft)</li>
-<li><strong>new_version</strong> &#8211; version number of latest update</li>
-<li><strong>update_date</strong> &#8211; data of new update</li>
-<li><strong>aud_url</strong> &#8211; URL of astro-update</li>
+<li><strong>software</strong> – software package to update (eg. heasoft)</li>
+<li><strong>new_version</strong> – version number of latest update</li>
+<li><strong>update_date</strong> – data of new update</li>
+<li><strong>aud_url</strong> – URL of astro-update</li>
 </ul>
 </td>
 </tr>
@@ -170,7 +167,7 @@ software download page in their web browser).</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>software</strong> &#8211; name of software to check</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>software</strong> – name of software to check</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(no output)</td>
 </tr>
@@ -183,23 +180,23 @@ software download page in their web browser).</p>
 <code class="descclassname">astroupdate.</code><code class="descname">get_au_curvers</code><span class="sig-paren">(</span><em>aud_df</em>, <em>software</em>, <em>strlen=100</em>, <em>open_url=False</em>, <em>parser='lxml'</em><span class="sig-paren">)</span><a class="headerlink" href="#astroupdate.get_au_curvers" title="Permalink to this definition">¶</a></dt>
 <dd><p>gets the version for the specified software</p>
 <p>From the astro-update dataframe (as created by read_au_defs()), gets the version for the specified software from
-the software maintainer&#8217;s webpage, parses software&#8217;s version_url page and returns current version and current
+the software maintainer’s webpage, parses software’s version_url page and returns current version and current
 release date of the software</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>aud_df</strong> &#8211; input astro_update dataframe (from read_au_defs)</li>
-<li><strong>sofware</strong> &#8211; input name of software pacakage (as indexed in the dataframe</li>
-<li><strong>strlen</strong> &#8211; number of characters after pattern_marker to search for version string</li>
-<li><strong>open_url</strong> &#8211; if True will open the URL containing the version information for the specified software</li>
-<li><strong>parser</strong> &#8211; html parser to be used by BeautifulSoup (default = &#8220;lxml&#8221;)</li>
+<li><strong>aud_df</strong> – input astro_update dataframe (from read_au_defs)</li>
+<li><strong>sofware</strong> – input name of software pacakage (as indexed in the dataframe</li>
+<li><strong>strlen</strong> – number of characters after pattern_marker to search for version string</li>
+<li><strong>open_url</strong> – if True will open the URL containing the version information for the specified software</li>
+<li><strong>parser</strong> – html parser to be used by BeautifulSoup (default = “lxml”)</li>
 </ul>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">curver, currel = current version and current release date of software; 
-if current version  or current release can&#8217;t be determined, their value is set to &#8216;Not Found&#8217;</p>
+if current version  or current release can’t be determined, their value is set to ‘Not Found’</p>
 </td>
 </tr>
 </tbody>
@@ -210,7 +207,7 @@ if current version  or current release can&#8217;t be determined, their value is
 <dt id="astroupdate.make_astroupdate_page">
 <code class="descclassname">astroupdate.</code><code class="descname">make_astroupdate_page</code><span class="sig-paren">(</span><em>outdir='/software/github/heasarc/astro_update/html'</em>, <em>defdir='/software/github/heasarc/astro_update/definitions'</em>, <em>deffile='astroupdate_defs.json'</em>, <em>outname='astro-update.html'</em>, <em>templatedir='/software/github/heasarc/astro_update/templates'</em>, <em>clobber=True</em><span class="sig-paren">)</span><a class="headerlink" href="#astroupdate.make_astroupdate_page" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates the astro-update.html web page</p>
-<p>Creates the astro-update.html web page using python&#8217;s Jinja2 templating engine 
+<p>Creates the astro-update.html web page using python’s Jinja2 templating engine
 based on the information in the <code class="docutils literal"><span class="pre">&lt;defdir&gt;/&lt;deffile&gt;</span></code> file</p>
 <p>Templates:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">astroupdate_table_template</span><span class="o">.</span><span class="n">html</span><span class="p">:</span> <span class="n">the</span> <span class="n">astro</span><span class="o">-</span><span class="n">update</span> <span class="n">html</span> <span class="n">table</span>
@@ -222,12 +219,12 @@ based on the information in the <code class="docutils literal"><span class="pre"
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>outdir</strong> &#8211; output directory where &lt;outname&gt; file is written</li>
-<li><strong>defdir</strong> &#8211; directory where the json definition file is  stored</li>
-<li><strong>deffile</strong> &#8211; name of json definitions file in defdir to use</li>
-<li><strong>outname</strong> &#8211; name of output html file</li>
-<li><strong>templatedir</strong> &#8211; directory where jinja2 templates are stored</li>
-<li><strong>clobber</strong> &#8211; overwrite file if True, else don&#8217;t overwrite</li>
+<li><strong>outdir</strong> – output directory where &lt;outname&gt; file is written</li>
+<li><strong>defdir</strong> – directory where the json definition file is  stored</li>
+<li><strong>deffile</strong> – name of json definitions file in defdir to use</li>
+<li><strong>outname</strong> – name of output html file</li>
+<li><strong>templatedir</strong> – directory where jinja2 templates are stored</li>
+<li><strong>clobber</strong> – overwrite file if True, else don’t overwrite</li>
 </ul>
 </td>
 </tr>
@@ -248,7 +245,7 @@ based on the information in the <code class="docutils literal"><span class="pre"
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>date</strong> &#8211; release date of form understood by dateutil.parser</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>date</strong> – release date of form understood by dateutil.parser</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">TODO: Date object (or maybe a formatted date string?)</td>
 </tr>
@@ -265,7 +262,7 @@ based on the information in the <code class="docutils literal"><span class="pre"
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>ausoftdef</strong> &#8211; name of software definition file</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>ausoftdef</strong> – name of software definition file</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Return aud_df:</th><td class="field-body">pandas dataframe of the astro-update software definitions</td>
 </tr>
@@ -275,18 +272,18 @@ based on the information in the <code class="docutils literal"><span class="pre"
 
 <dl class="function">
 <dt id="astroupdate.update_astroupdate">
-<code class="descclassname">astroupdate.</code><code class="descname">update_astroupdate</code><span class="sig-paren">(</span><em>defdir='/software/github/heasarc/astro_update/definitions'</em>, <em>deffile='astroupdate_defs_MASTER.json'</em>, <em>clobber=True</em>, <em>outdir='/software/github/heasarc/astro_update/html'</em>, <em>outname='astro-update.html'</em><span class="sig-paren">)</span><a class="headerlink" href="#astroupdate.update_astroupdate" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">astroupdate.</code><code class="descname">update_astroupdate</code><span class="sig-paren">(</span><em>defdir='/software/github/heasarc/astro_update/definitions'</em>, <em>deffile='astroupdate_defs_MASTER.json'</em>, <em>clobber=True</em>, <em>outdir='/software/github/heasarc/astro_update/html'</em>, <em>outname='astro-update.html'</em>, <em>templatedir='/software/github/heasarc/astro_update/templates'</em><span class="sig-paren">)</span><a class="headerlink" href="#astroupdate.update_astroupdate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates the astro-update definitions file then creates the astro-update webpage</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>defdir</strong> &#8211; full path to directory where json definitions file is stored</li>
-<li><strong>deffile</strong> &#8211; name of json definitions file in &lt;defdir&gt; to use</li>
-<li><strong>clobber</strong> &#8211; overwrith astro-update.html file if True</li>
-<li><strong>outdir</strong> &#8211; output directory for astro-update.html file</li>
-<li><strong>outname</strong> &#8211; name of output file (default = astro-update.html)</li>
+<li><strong>defdir</strong> – full path to directory where json definitions file is stored</li>
+<li><strong>deffile</strong> – name of json definitions file in &lt;defdir&gt; to use</li>
+<li><strong>clobber</strong> – overwrith astro-update.html file if True</li>
+<li><strong>outdir</strong> – output directory for astro-update.html file</li>
+<li><strong>outname</strong> – name of output file (default = astro-update.html)</li>
 </ul>
 </td>
 </tr>
@@ -307,10 +304,10 @@ based on the information in the <code class="docutils literal"><span class="pre"
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>aud_df</strong> &#8211; astro-update dataframe</li>
-<li><strong>outroot</strong> &#8211; file rootname (default = &#8216;astroupdate_defs&#8217;)</li>
-<li><strong>defdir</strong> &#8211; file ouptput directory</li>
-<li><strong>clobber</strong> &#8211; if True, will overwrite an existing file</li>
+<li><strong>aud_df</strong> – astro-update dataframe</li>
+<li><strong>outroot</strong> – file rootname (default = ‘astroupdate_defs’)</li>
+<li><strong>defdir</strong> – file ouptput directory</li>
+<li><strong>clobber</strong> – if True, will overwrite an existing file</li>
 </ul>
 </td>
 </tr>
@@ -342,7 +339,7 @@ based on the information in the <code class="docutils literal"><span class="pre"
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="tutorial.html" title="previous chapter">Using Astro-Update software to update the HEASARC Astro-update page</a></li>
-      <li>Next: <a href="audef.html" title="next chapter">The Astro-Update Definitions File</a></li>
+      <li>Next: <a href="audef.html" title="next chapter">The Software Definitions File</a></li>
   </ul></li>
 </ul>
 </div>
@@ -364,7 +361,7 @@ based on the information in the <code class="docutils literal"><span class="pre"
       &copy;2017, M. F. Corcoran.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.5</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.4</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
       
       |
