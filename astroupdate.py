@@ -139,7 +139,7 @@ def make_astroupdate_page(outdir="/software/github/heasarc/astro_update/html",
     return status
 
 def read_au_defs(defdir='/Users/mcorcora/software/github/heasarc/astro_update/definitions',
-                 deffile='astroupdate_defs.json'):
+                 deffile='astroupdate_defs_MASTER.json'):
     """ returns a pandas dataframe of astro-update software definitions
     
     returns a pandas dataframe version of the entries in the astro-update json software definition file
