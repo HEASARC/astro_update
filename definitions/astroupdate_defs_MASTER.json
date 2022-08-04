@@ -1010,10 +1010,10 @@
     "spex": {
         "release_pattern": "[a-z,A-Z]+\\s\\d{4}",
         "description": "SPEctral X-ray and UV modeling, analysis and fitting",
-        "release_url": "https://www.sron.nl/astrophysics-spex/download/change-log",
+        "release_url": "https://spex-xray.github.io/spex-help/getstarted/install.html",
         "author": "Kaastra et al. (1996)",
         "pattern": "\\d+\\.{0,1}\\d+\\.{0,1}\\d+",
-        "release_marker": "Version ",
+        "release_marker": "was released on",
         "ad_version": "3.04.00",
         "download_url": "https://spex-xray.github.io/spex-help/getstarted/install.html",
         "name": "SPEX",
